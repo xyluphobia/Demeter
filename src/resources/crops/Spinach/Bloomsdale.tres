@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://kuklleyd8akf"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_gwfty"]
+
+[resource]
+script = ExtResource("1_gwfty")
+Name = "Bloomsdale"
+Plant = 12
+Season = 3
+HarvestType = 1
+MaturityDays = 45
+ReharvestCycleDays = 7
+Flavour = 80
+Yield = 100
+ShelfLife = 40
+Resilience = 100
+GrowthSpeed = 80
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

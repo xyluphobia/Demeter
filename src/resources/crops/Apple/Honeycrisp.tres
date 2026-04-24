@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://pvah56v2wjk"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_407ll"]
+
+[resource]
+script = ExtResource("1_407ll")
+Name = "Honeycrisp"
+LifeCycle = 2
+Tier = 1
+Season = 2
+MaturityDays = 913
+ReharvestCycleDays = 365
+Flavour = 100
+Yield = 60
+ShelfLife = 80
+Resilience = 80
+GrowthSpeed = 20
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

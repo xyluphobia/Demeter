@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://i4ueilmcxkny"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_xgfwf"]
+
+[resource]
+script = ExtResource("1_xgfwf")
+Name = "Muscat"
+Plant = 4
+LifeCycle = 1
+Tier = 1
+Season = 2
+MaturityDays = 1095
+ReharvestCycleDays = 365
+Flavour = 100
+Yield = 60
+ShelfLife = 60
+Resilience = 60
+GrowthSpeed = 20
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

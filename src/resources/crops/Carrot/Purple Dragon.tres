@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://bj4xbeaixjcpy"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_hgt1f"]
+
+[resource]
+script = ExtResource("1_hgt1f")
+Name = "Purple Dragon"
+Plant = 1
+Tier = 1
+Season = 2
+MaturityDays = 80
+Flavour = 80
+Yield = 60
+ShelfLife = 60
+Resilience = 80
+GrowthSpeed = 20
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

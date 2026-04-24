@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://bh3wnuhu575rf"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_qsayt"]
+
+[resource]
+script = ExtResource("1_qsayt")
+Name = "Oyster"
+Plant = 6
+Season = 3
+HarvestType = 1
+MaturityDays = 11
+ReharvestCycleDays = 6
+Flavour = 80
+Yield = 80
+ShelfLife = 40
+Resilience = 100
+GrowthSpeed = 100
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

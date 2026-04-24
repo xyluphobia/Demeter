@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://bohbcw4tw10tu"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_ma1nu"]
+
+[resource]
+script = ExtResource("1_ma1nu")
+Name = "Concord"
+Plant = 4
+LifeCycle = 1
+Season = 2
+MaturityDays = 1095
+ReharvestCycleDays = 365
+Flavour = 80
+Yield = 80
+ShelfLife = 60
+Resilience = 100
+GrowthSpeed = 20
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

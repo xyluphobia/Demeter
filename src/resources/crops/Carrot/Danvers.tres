@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://dwrl4pvjh5ubv"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_dblmd"]
+
+[resource]
+script = ExtResource("1_dblmd")
+Name = "Danvers"
+Plant = 1
+Season = 2
+MaturityDays = 68
+Flavour = 60
+Yield = 100
+ShelfLife = 80
+Resilience = 100
+GrowthSpeed = 60
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

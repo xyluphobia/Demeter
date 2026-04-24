@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://cgg54l7yr1p8q"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_ptfh3"]
+
+[resource]
+script = ExtResource("1_ptfh3")
+Name = "Red Pontiac"
+Plant = 9
+Tier = 1
+Season = 2
+MaturityDays = 80
+Flavour = 80
+Yield = 80
+ShelfLife = 80
+Resilience = 80
+GrowthSpeed = 20
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

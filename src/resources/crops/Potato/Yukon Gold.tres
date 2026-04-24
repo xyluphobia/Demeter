@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://boxjr0a5vq5bi"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_tycx1"]
+
+[resource]
+script = ExtResource("1_tycx1")
+Name = "Yukon Gold"
+Plant = 9
+Season = 2
+MaturityDays = 63
+Flavour = 100
+Yield = 80
+ShelfLife = 80
+Resilience = 80
+GrowthSpeed = 60
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

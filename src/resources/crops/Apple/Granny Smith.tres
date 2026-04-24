@@ -6,6 +6,7 @@
 script = ExtResource("1_311bu")
 Name = "Granny Smith"
 LifeCycle = 2
+Season = 2
 MaturityDays = 913
 ReharvestCycleDays = 365
 Flavour = 60

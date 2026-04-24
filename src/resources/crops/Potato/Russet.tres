@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://bomsgpyc6pjas"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_erkog"]
+
+[resource]
+script = ExtResource("1_erkog")
+Name = "Russet"
+Plant = 9
+Season = 2
+MaturityDays = 105
+Flavour = 60
+Yield = 100
+ShelfLife = 100
+Resilience = 80
+GrowthSpeed = 20
+metadata/_custom_type_script = "uid://uh0bfixhgfay"
