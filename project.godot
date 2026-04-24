@@ -13,6 +13,11 @@ config_version=5
 config/name="Demeter"
 config/features=PackedStringArray("4.6", "C#", "Mobile")
 
+[autoload]
+
+GameCalendar="*uid://5qn7xoa0heh2"
+InputManager="*uid://b1fffg6ivlnwu"
+
 [display]
 
 window/size/viewport_width=1280

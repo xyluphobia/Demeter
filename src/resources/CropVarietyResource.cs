@@ -7,11 +7,8 @@ public partial class CropVarietyResource : Resource
   [ExportCategory("General")]
   [Export] public string Name { get; set; }
 
-  public enum Tiers { COMMON, HEIRLOOM, HYBRID }
   [Export] public Tiers Tier { get; set; }
-  public enum Seasons { SPRING, SUMMER, AUTUMN, WINTER }
   [Export] public Seasons Season { get; set; }
-  public enum HarvestTypes { SINGLE, REPEAT }
   [Export] public HarvestTypes HarvestType { get; set; }
 
   [Export] public int MaturityDays { get; set; }

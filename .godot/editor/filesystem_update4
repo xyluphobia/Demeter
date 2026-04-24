@@ -1,0 +1,7 @@
+res://src/resources/CropVarietyResource.cs
+res://src/resources/InventoryItemResource.cs
+res://src/resources/RecipeResource.cs
+res://src/resources/RecipeInputResource.cs
+res://src/singletons/GameCalendar.cs
+res://src/singletons/InputManager.cs
+res://src/singletons/GameEnums.cs
