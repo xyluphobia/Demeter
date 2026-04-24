@@ -1,0 +1,14 @@
+[gd_scene format=4 uid="uid://ch66v5naworwe"]
+
+[ext_resource type="Texture2D" uid="uid://drt0uum3pdexs" path="res://assets/farm/items/haystack/haystack.png" id="1_6uq27"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ds6fx"]
+texture = ExtResource("1_6uq27")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_b03sq"]
+sources/1 = SubResource("TileSetAtlasSource_ds6fx")
+
+[node name="FarmTileMap" type="TileMapLayer" unique_id=635726898]
+tile_map_data = PackedByteArray("AAD+/wAAAQAAAAAAAAD//wEAAQAAAAAAAAD//wIAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAABAAMAAQAAAAAAAAABAAIAAQAAAAAAAAABAAEAAQAAAAAAAAACAAEAAQAAAAAAAAACAAAAAQAAAAAAAAACAP//AQAAAAAAAAABAP//AQAAAAAAAAABAP7/AQAAAAAAAAAAAP7/AQAAAAAAAAD///7/AQAAAAAAAAD/////AQAAAAAAAAD//wAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAP//AQAAAAAAAAABAAAAAQAAAAAAAAD+/wIAAQAAAAAAAAD+/wEAAQAAAAAAAAD//wMAAQAAAAAAAAACAAIAAQAAAAAAAAACAP7/AQAAAAAAAAD+////AQAAAAAAAAD+//7/AQAAAAAAAAD+/wMAAQAAAAAAAAACAAMAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_b03sq")

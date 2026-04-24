@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777042680
+::res://::1777047560
 ::res://assets/::1777033078
 ::res://assets/farm/::1777033078
 ::res://assets/farm/animals/::1777033078
@@ -440,9 +440,10 @@ orange_tree_produce.png::CompressedTexture2D::7192744949199675125::1777033078::1
 peach_tree_produce.png::CompressedTexture2D::5716452746556216146::1777033078::1777033078::1::::<><><>0<>0<>e7a030a6c888bc79222d52f6d16a2ce5<>res://.godot/imported/peach_tree_produce.png-8777732866fbde8565753e508a8a1c1a.ctex::
 pear_tree_produce.png::CompressedTexture2D::1653030957497564327::1777033078::1777033078::1::::<><><>0<>0<>a333131efc40ede598160137e4d249ef<>res://.godot/imported/pear_tree_produce.png-db506174a6c5a6696424632cd4d10123.ctex::
 plump_tree_produce.png::CompressedTexture2D::3156173284929665357::1777033078::1777033078::1::::<><><>0<>0<>8a47624e374ff780f8d732957081c248<>res://.godot/imported/plump_tree_produce.png-654a68edeec0fbf76aae2340733a6dc0.ctex::
+::res://data/::1777047560
 ::res://scenes/::1777039491
-::res://scenes/debug/::1777042652
-Sprint1DebugScene.tscn::PackedScene::6346610087397330743::1777042652::0::1::::<><><>0<>0<><>::uid://23jgj5q45amx::::res://src/debug/Sprint1Debug.cs
+::res://scenes/debug/::1777047565
+Sprint1DebugScene.tscn::PackedScene::6346610087397330743::1777047565::0::1::::<><><>0<>0<><>::uid://23jgj5q45amx::::res://src/debug/Sprint1Debug.cs
 ::res://src/::1777034995
 ::res://src/debug/::1777039176
 Sprint1Debug.cs::CSharpScript::1953459042860059503::1777039176::0::1::::<>Node<><>0<>0<><>::
@@ -451,19 +452,22 @@ CropVarietyResource.cs::CSharpScript::1419747503681929388::1777042091::0::1::::C
 InventoryItemResource.cs::CSharpScript::6099871171691437250::1777033078::0::1::::InventoryItemResource<>Resource<><>0<>0<><>::
 RecipeInputResource.cs::CSharpScript::5128338089807791289::1777033078::0::1::::RecipeInputResource<>Resource<><>0<>0<><>::
 RecipeResource.cs::CSharpScript::4992889341136804514::1777033078::0::1::::RecipeResource<>Resource<><>0<>0<><>::
-::res://src/resources/crops/::1777042586
-::res://src/resources/crops/Apple/::1777040762
-::res://src/resources/crops/Lettuce/::1777042671
-Buttercrunch.tres::Resource/CropVarietyResource::6161195306592049427::1777042643::0::1::::<><><>0<>0<><>::uid://uh0bfixhgfay::::res://src/resources/CropVarietyResource.cs
-Romain.tres::Resource/CropVarietyResource::2393877884295823702::1777042647::0::1::::<><><>0<>0<><>::uid://uh0bfixhgfay::::res://src/resources/CropVarietyResource.cs
-Rouge d'Hiver.tres::Resource/CropVarietyResource::4948041769082218290::1777042671::0::1::::<><><>0<>0<><>::uid://uh0bfixhgfay::::res://src/resources/CropVarietyResource.cs
-::res://src/resources/crops/Pea/::1777042680
-SugarSnap.tres::Resource/CropVarietyResource::8239585187331425594::1777042540::0::1::::<><><>0<>0<><>::uid://uh0bfixhgfay::::res://src/resources/CropVarietyResource.cs
-Thomas Laxton.tres::Resource/CropVarietyResource::8815682913680400201::1777042578::0::1::::<><><>0<>0<><>::uid://uh0bfixhgfay::::res://src/resources/CropVarietyResource.cs
+::res://src/resources/crops/::1777045945
+::res://src/resources/crops/Apple/::1777043873
+::res://src/resources/crops/Carrot/::1777044013
+::res://src/resources/crops/Corn/::1777043191
+::res://src/resources/crops/Cucumber/::1777043308
+::res://src/resources/crops/Grape/::1777044128
+::res://src/resources/crops/Lettuce/::1777042788
+::res://src/resources/crops/Mushroom/::1777046001
+::res://src/resources/crops/Pea/::1777042788
+::res://src/resources/crops/Pepper/::1777043446
+::res://src/resources/crops/Potato/::1777044333
+::res://src/resources/crops/Pumpkin/::1777045934
+::res://src/resources/crops/Radish/::1777042889
+::res://src/resources/crops/Spinach/::1777046790
 ::res://src/resources/crops/Strawberry/::1777042452
-Albion.tres::Resource/CropVarietyResource::1380020514984060032::1777042452::0::1::::<><><>0<>0<><>::uid://uh0bfixhgfay::::res://src/resources/CropVarietyResource.cs
-Chandler.tres::Resource/CropVarietyResource::2868207100376033608::1777042452::0::1::::<><><>0<>0<><>::uid://uh0bfixhgfay::::res://src/resources/CropVarietyResource.cs
-Seascape.tres::Resource/CropVarietyResource::4386756983727307965::1777042452::0::1::::<><><>0<>0<><>::uid://uh0bfixhgfay::::res://src/resources/CropVarietyResource.cs
+::res://src/resources/crops/Tomato/::1777043099
 ::res://src/singletons/::1777042143
 GameCalendar.cs::CSharpScript::2139543049214852193::1777037310::0::1::::<>Node<><>0<>0<><>::
 GameEnums.cs::CSharpScript::8563243329365231662::1777042143::0::1::::<><><>0<>0<><>::
