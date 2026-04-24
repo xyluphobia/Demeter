@@ -6,6 +6,8 @@ public partial class CropVarietyResource : Resource
 {
   [ExportCategory("General")]
   [Export] public string Name { get; set; }
+  [Export] public Plants Plant { get; set; }
+  [Export] public LifeCycles LifeCycle { get; set; }
 
   [Export] public Tiers Tier { get; set; }
   [Export] public Seasons Season { get; set; }

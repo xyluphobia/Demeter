@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://ct1r8so42ncj8"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_r73cw"]
+
+[resource]
+script = ExtResource("1_r73cw")
+Name = "Buttercrunch"
+Plant = 5
+MaturityDays = 58
+Flavour = 80
+Yield = 60
+ShelfLife = 60
+Resilience = 60
+GrowthSpeed = 60
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://badu231fc54qs"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_tvvbd"]
+
+[resource]
+script = ExtResource("1_tvvbd")
+Name = "Romaine"
+Plant = 5
+MaturityDays = 78
+Flavour = 60
+Yield = 80
+ShelfLife = 60
+Resilience = 80
+GrowthSpeed = 40
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

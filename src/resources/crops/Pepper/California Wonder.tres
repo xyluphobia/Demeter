@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://da3uqbtlhxla3"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_636e4"]
+
+[resource]
+script = ExtResource("1_636e4")
+Name = "California Wonder"
+Plant = 8
+Season = 1
+HarvestType = 1
+MaturityDays = 73
+ReharvestCycleDays = 6
+Flavour = 60
+Yield = 60
+ShelfLife = 60
+Resilience = 60
+GrowthSpeed = 60
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

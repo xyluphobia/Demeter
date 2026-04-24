@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://d1sdcvq3a5vnt"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_0pmj7"]
+
+[resource]
+script = ExtResource("1_0pmj7")
+Name = "Jimmy Nardello"
+Plant = 8
+Tier = 1
+Season = 1
+HarvestType = 1
+MaturityDays = 85
+ReharvestCycleDays = 6
+Flavour = 100
+Yield = 100
+ShelfLife = 40
+Resilience = 40
+GrowthSpeed = 40
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://ccq4r36ltl12m"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_52o7f"]
+
+[resource]
+script = ExtResource("1_52o7f")
+Name = "Rouge d'Hiver"
+Plant = 5
+Tier = 1
+MaturityDays = 63
+Flavour = 80
+Yield = 80
+ShelfLife = 60
+Resilience = 100
+GrowthSpeed = 60
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

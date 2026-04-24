@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://twq0bd5osblw"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_lfyth"]
+
+[resource]
+script = ExtResource("1_lfyth")
+Name = "Chandler"
+Plant = 13
+LifeCycle = 1
+MaturityDays = 150
+ReharvestCycleDays = 3
+Flavour = 80
+Yield = 80
+ShelfLife = 20
+Resilience = 60
+GrowthSpeed = 20
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

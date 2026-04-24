@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://b2m6jyubjitc1"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_bhetv"]
+
+[resource]
+script = ExtResource("1_bhetv")
+Name = "Cherry Belle"
+Plant = 11
+MaturityDays = 25
+Flavour = 60
+Yield = 80
+ShelfLife = 60
+Resilience = 100
+GrowthSpeed = 80
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

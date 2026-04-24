@@ -1,1 +1,3 @@
+CropVarietyResource
+Resource
 CSharpScript

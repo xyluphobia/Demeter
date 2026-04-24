@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://teor0srw373t"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_k6y5h"]
+
+[resource]
+script = ExtResource("1_k6y5h")
+Name = "Sun Gold Cherry"
+Plant = 14
+Season = 1
+HarvestType = 1
+MaturityDays = 61
+ReharvestCycleDays = 3
+Flavour = 100
+Yield = 100
+ShelfLife = 20
+Resilience = 60
+GrowthSpeed = 60
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

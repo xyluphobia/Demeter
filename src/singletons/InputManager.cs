@@ -3,7 +3,10 @@ using System;
 
 public partial class InputManager : Node
 {
+  public static InputManager I { get; private set; }
+
   [Signal] public delegate void TappedEventHandler(Vector2 position);
+  [Signal] public delegate void DraggingEventHandler(bool dragging);
   [Signal] public delegate void PinchChangedEventHandler(float delta);
 
   private Vector2 _touch0Position;
@@ -14,6 +17,12 @@ public partial class InputManager : Node
 
   private const float TapThreshold = 10f;
 
+  public override void _Ready()
+  {
+      I = this;
+  }
+
+
   public override void _Input(InputEvent @event) {
     switch(@event)
     {
@@ -23,6 +32,7 @@ public partial class InputManager : Node
             _touch0Position = touch.Position;
             _touch0StartPosition = touch.Position;
             _isDragging = false;
+            EmitSignal(SignalName.Dragging, _isDragging);
           }
           else if (touch.Index == 1) {
             _touch1Position = touch.Position;
@@ -36,14 +46,18 @@ public partial class InputManager : Node
               EmitSignal(SignalName.Tapped, touch.Position);
             }
           }
+          _isDragging = false;
+          EmitSignal(SignalName.Dragging, _isDragging);
         }
         break;
 
       case InputEventScreenDrag drag:
         if (drag.Index == 0) {
             _touch0Position = drag.Position;
-            if (_touch0StartPosition.DistanceTo(drag.Position) > TapThreshold)
-                _isDragging = true;
+            if (_touch0StartPosition.DistanceTo(drag.Position) > TapThreshold) {
+              _isDragging = true;
+              EmitSignal(SignalName.Dragging, _isDragging);
+            }
         }
         else if (drag.Index == 1) {
             _touch1Position = drag.Position;

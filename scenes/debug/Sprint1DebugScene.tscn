@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cwol0gp4o1ax0"]
+
+[ext_resource type="Script" uid="uid://23jgj5q45amx" path="res://src/debug/Sprint1Debug.cs" id="1_t7exn"]
+
+[node name="Sprint1Debug" type="Node2D" unique_id=1018467129]
+script = ExtResource("1_t7exn")
+
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=1163671716]
+
+[node name="Outputs" type="VBoxContainer" parent="Canvas" unique_id=596263114]
+offset_right = 69.0
+offset_bottom = 50.0
+
+[node name="Day" type="HBoxContainer" parent="Canvas/Outputs" unique_id=1680578791]
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="Canvas/Outputs/Day" unique_id=1559793408]
+layout_mode = 2
+text = "Day: "
+
+[node name="Result" type="Label" parent="Canvas/Outputs/Day" unique_id=264342992]
+layout_mode = 2
+
+[node name="Season" type="HBoxContainer" parent="Canvas/Outputs" unique_id=42174890]
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="Canvas/Outputs/Season" unique_id=1582899213]
+layout_mode = 2
+text = "Season: "
+
+[node name="Result" type="Label" parent="Canvas/Outputs/Season" unique_id=946168386]
+layout_mode = 2
+
+[node name="LastTapPos" type="HBoxContainer" parent="Canvas/Outputs" unique_id=613078791]
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="Canvas/Outputs/LastTapPos" unique_id=765691348]
+layout_mode = 2
+text = "LastTapPos: "
+
+[node name="Result" type="Label" parent="Canvas/Outputs/LastTapPos" unique_id=1858572909]
+layout_mode = 2
+
+[node name="Dragging" type="HBoxContainer" parent="Canvas/Outputs" unique_id=1323768722]
+layout_mode = 2
+
+[node name="Desc" type="Label" parent="Canvas/Outputs/Dragging" unique_id=564440138]
+layout_mode = 2
+text = "Dragging: "
+
+[node name="Result" type="Label" parent="Canvas/Outputs/Dragging" unique_id=1339987808]
+layout_mode = 2
+
+[node name="ProgressDay" type="Button" parent="Canvas" unique_id=138850829]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.5
+offset_top = -120.0
+offset_right = 226.5
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+text = "Next Day"

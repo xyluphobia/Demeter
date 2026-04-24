@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://dreg54g6l0jn7"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_a0yhi"]
+
+[resource]
+script = ExtResource("1_a0yhi")
+Name = "Banana Pepper"
+Plant = 8
+Season = 1
+HarvestType = 1
+MaturityDays = 65
+ReharvestCycleDays = 6
+Flavour = 60
+Yield = 80
+ShelfLife = 60
+Resilience = 60
+GrowthSpeed = 60
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

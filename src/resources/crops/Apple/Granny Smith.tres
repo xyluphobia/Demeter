@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://btcr1ucnbfs26"]
+
+[ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_311bu"]
+
+[resource]
+script = ExtResource("1_311bu")
+Name = "Granny Smith"
+LifeCycle = 2
+MaturityDays = 913
+ReharvestCycleDays = 365
+Flavour = 60
+Yield = 80
+ShelfLife = 100
+Resilience = 80
+GrowthSpeed = 20
+metadata/_custom_type_script = "uid://uh0bfixhgfay"

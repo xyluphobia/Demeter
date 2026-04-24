@@ -1,7 +1,7 @@
 is_global = true
 build_property.GodotDisabledSourceGenerators = 
-build_property.GodotProjectDir = C:\Users\Matthew\Documents\demeter\
-build_property.GodotProjectDirBase64 = QzpcVXNlcnNcTWF0dGhld1xEb2N1bWVudHNcZGVtZXRlclw=
+build_property.GodotProjectDir = /home/matt/Repos/Demeter/
+build_property.GodotProjectDirBase64 = L2hvbWUvbWF0dC9SZXBvcy9EZW1ldGVyLw==
 build_property.GodotSourceGenerators = 
 build_property.IsGodotToolsProject = 
 build_property.TargetFramework = net8.0
@@ -15,7 +15,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Demeter
-build_property.ProjectDir = C:\Users\Matthew\Documents\demeter\
+build_property.ProjectDir = /home/matt/Repos/Demeter/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
