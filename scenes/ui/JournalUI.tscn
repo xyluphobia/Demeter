@@ -1,0 +1,338 @@
+[gd_scene format=3 uid="uid://b108xlxobfj7r"]
+
+[ext_resource type="Texture2D" uid="uid://bftieejus8xi5" path="res://assets/ui/ui_books/books.png" id="1_63ixx"]
+[ext_resource type="Script" uid="uid://o7kxyu0bi4k2" path="res://src/ui/JournalUi.cs" id="1_h84i5"]
+[ext_resource type="Resource" uid="uid://df7g707a073lf" path="res://data/CropRegistry.tres" id="2_8h443"]
+[ext_resource type="Texture2D" uid="uid://dc7gl3a4mqttb" path="res://assets/ui/ui_banners/banners_horizontal.png" id="2_stqb7"]
+[ext_resource type="Script" uid="uid://5chnacof6bno" path="res://src/ui/SeedGrid.cs" id="3_8h443"]
+[ext_resource type="Texture2D" uid="uid://jwuvffvb86cs" path="res://assets/ui/icons/Seasons.png" id="3_fa0tw"]
+[ext_resource type="PackedScene" uid="uid://dih35et2nlcvc" path="res://scenes/ui/SeedButton.tscn" id="3_rx0bv"]
+[ext_resource type="Texture2D" uid="uid://cxq43vvok6khq" path="res://assets/ui/ui_grids/grid_icons.png" id="8_ush5w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stqb7"]
+texture = ExtResource("2_stqb7")
+texture_margin_left = 4.0
+texture_margin_top = 5.0
+texture_margin_bottom = 5.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(828, 292, 22, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ypv5"]
+atlas = ExtResource("3_fa0tw")
+region = Rect2(3, 3, 9, 9)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ypv5"]
+texture = ExtResource("2_stqb7")
+texture_margin_left = 4.0
+texture_margin_top = 5.0
+texture_margin_bottom = 5.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(828, 564, 22, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h84i5"]
+atlas = ExtResource("3_fa0tw")
+region = Rect2(21, 4, 6, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h84i5"]
+texture = ExtResource("2_stqb7")
+texture_margin_left = 4.0
+texture_margin_top = 5.0
+texture_margin_bottom = 5.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(604, 564, 22, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx0bv"]
+atlas = ExtResource("3_fa0tw")
+region = Rect2(20, 20, 9, 9)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fa0tw"]
+texture = ExtResource("2_stqb7")
+texture_margin_left = 4.0
+texture_margin_top = 5.0
+texture_margin_bottom = 5.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(156, 564, 22, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h443"]
+atlas = ExtResource("3_fa0tw")
+region = Rect2(3, 22, 9, 6)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5suib"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bch43"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkmhq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_78dfu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v6ffx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv62c"]
+atlas = ExtResource("8_ush5w")
+region = Rect2(52, 36, 6, 8)
+
+[node name="JournalUI" type="CanvasLayer" unique_id=1485079148]
+script = ExtResource("1_h84i5")
+CropRegistry = ExtResource("2_8h443")
+
+[node name="BookBaseContainer" type="HBoxContainer" parent="." unique_id=565088989]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -34.0
+offset_right = 62.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(8.6, 8.6)
+pivot_offset = Vector2(62, 34)
+theme_override_constants/separation = 0
+
+[node name="LeftPage" type="NinePatchRect" parent="BookBaseContainer" unique_id=838084832]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_63ixx")
+region_rect = Rect2(123, 237, 24, 26)
+patch_margin_left = 24
+patch_margin_top = 3
+patch_margin_bottom = 6
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BookBaseContainer/LeftPage" unique_id=1884658935]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 7
+
+[node name="SeedGridLeft" type="GridContainer" parent="BookBaseContainer/LeftPage/MarginContainer" unique_id=2107815848]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 3
+script = ExtResource("3_8h443")
+SeedButtonScene = ExtResource("3_rx0bv")
+
+[node name="Summer" type="Button" parent="BookBaseContainer/LeftPage" unique_id=1073258934]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -9.627905
+offset_top = -29.999996
+offset_right = 2.872095
+offset_bottom = -19.999996
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_stqb7")
+
+[node name="Sun" type="TextureRect" parent="BookBaseContainer/LeftPage/Summer" unique_id=553272449]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.5499992
+offset_top = -2.6
+offset_right = 7.450001
+offset_bottom = 6.3999996
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+texture = SubResource("AtlasTexture_1ypv5")
+stretch_mode = 5
+
+[node name="Autumn" type="Button" parent="BookBaseContainer/LeftPage" unique_id=442306833]
+layout_mode = 0
+offset_left = -9.7441845
+offset_top = 15.39535
+offset_right = 2.6976757
+offset_bottom = 25.395351
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ypv5")
+
+[node name="Leaf" type="TextureRect" parent="BookBaseContainer/LeftPage/Autumn" unique_id=682828528]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.5499992
+offset_top = -2.6
+offset_right = 7.450001
+offset_bottom = 6.3999996
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+texture = SubResource("AtlasTexture_h84i5")
+stretch_mode = 5
+
+[node name="Winter" type="Button" parent="BookBaseContainer/LeftPage" unique_id=1401728488]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -10.32558
+offset_top = -7.4418583
+offset_right = 2.8139544
+offset_bottom = 2.5581436
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_h84i5")
+
+[node name="Snow" type="TextureRect" parent="BookBaseContainer/LeftPage/Winter" unique_id=1605149789]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.5499992
+offset_top = -2.6
+offset_right = 7.450001
+offset_bottom = 6.3999996
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+texture = SubResource("AtlasTexture_rx0bv")
+stretch_mode = 5
+
+[node name="Spring" type="Button" parent="BookBaseContainer/LeftPage" unique_id=643265952]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -9.162789
+offset_top = 3.4883728
+offset_right = 2.930234
+offset_bottom = 13.488373
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_fa0tw")
+
+[node name="Sprout" type="TextureRect" parent="BookBaseContainer/LeftPage/Spring" unique_id=1490218187]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.4499998
+offset_top = -2.5999968
+offset_right = 7.55
+offset_bottom = 6.4000034
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+texture = SubResource("AtlasTexture_8h443")
+stretch_mode = 5
+
+[node name="PrevPage" type="Button" parent="BookBaseContainer/LeftPage" unique_id=29583619]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 3.39535
+offset_top = -9.232559
+offset_right = 9.8953495
+offset_bottom = -3.2325592
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5suib")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bch43")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wkmhq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_78dfu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v6ffx")
+icon_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="BookBaseContainer/LeftPage/PrevPage" unique_id=1571674299]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_tv62c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Spine" type="NinePatchRect" parent="BookBaseContainer" unique_id=1598154374]
+layout_mode = 2
+texture = ExtResource("1_63ixx")
+region_rect = Rect2(147, 237, 9, 26)
+patch_margin_left = 5
+patch_margin_top = 3
+patch_margin_right = 5
+patch_margin_bottom = 6
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="RightPage" type="NinePatchRect" parent="BookBaseContainer" unique_id=2069157737]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_63ixx")
+region_rect = Rect2(156, 237, 25, 26)
+patch_margin_top = 3
+patch_margin_right = 24
+patch_margin_bottom = 6
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BookBaseContainer/RightPage" unique_id=1871847806]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 7
+
+[node name="SeedGridRight" type="GridContainer" parent="BookBaseContainer/RightPage/MarginContainer" unique_id=1920220795]
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 3
+script = ExtResource("3_8h443")
+SeedButtonScene = ExtResource("3_rx0bv")
+
+[node name="NextPage" type="Button" parent="BookBaseContainer/RightPage" unique_id=867899526]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 47.09302
+offset_top = -9.232559
+offset_right = 53.59302
+offset_bottom = -3.2325592
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5suib")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bch43")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wkmhq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_78dfu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v6ffx")
+icon_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="BookBaseContainer/RightPage/NextPage" unique_id=388356397]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_tv62c")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true

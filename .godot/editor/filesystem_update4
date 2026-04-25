@@ -15,3 +15,11 @@ res://scenes/ui/work_plot_menu.tscn
 res://scenes/ui/WorkPlotMenu.tscn
 res://src/ui/WorkPlotMenu.cs
 res://src/plots/LockedPlot.cs
+res://scenes/ui/JournalUI.tscn
+res://src/ui/JournalUi.cs
+res://scenes/ui/SeedButton.tscn
+res://src/ui/SeedButton.cs
+res://src/ui/SeedGrid.cs
+res://src/resources/CropRegistry.cs
+res://src/resources/CropRegistryResource.cs
+res://data/CropRegistry.tres

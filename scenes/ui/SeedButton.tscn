@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dih35et2nlcvc"]
+
+[ext_resource type="Script" uid="uid://bkmpu5k2li38t" path="res://src/ui/SeedButton.cs" id="1_lny1q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v6ffx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tv62c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fw1ao"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xf64j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_48oqh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1ypv5"]
+load_path = "res://.godot/imported/grids.png-66860657eb95294ba2b499f8a15aa4cf.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ush5w"]
+atlas = SubResource("CompressedTexture2D_1ypv5")
+region = Rect2(182, 86, 4, 4)
+
+[node name="ButtonAndEmptyIcon" type="Button" unique_id=1030403687]
+custom_minimum_size = Vector2(16, 16)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxEmpty_v6ffx")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tv62c")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fw1ao")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_xf64j")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_48oqh")
+icon = SubResource("AtlasTexture_ush5w")
+icon_alignment = 1
+script = ExtResource("1_lny1q")
+
+[node name="SeedIcon" type="TextureRect" parent="." unique_id=251432916]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 2
+stretch_mode = 5
