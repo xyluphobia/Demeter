@@ -1,7 +1,9 @@
+Button
+CanvasLayer
+Label
+HBoxContainer
+Camera2D
+Node2D
 TileMapLayer
 TileMap
-CanvasLayer
-Button
 VBoxContainer
-HBoxContainer
-Label

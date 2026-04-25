@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bm8w47ruqynfo"]
+
+[ext_resource type="PackedScene" uid="uid://ch66v5naworwe" path="res://scenes/farm/FarmTileMap.tscn" id="1_fyp8f"]
+[ext_resource type="PackedScene" uid="uid://bamevyqgg57nb" path="res://scenes/player/PlayerCamera.tscn" id="2_6sbqx"]
+
+[node name="Sprint2DebugScene" type="Node2D" unique_id=1634955246]
+
+[node name="FarmTileMap" parent="." unique_id=2093991614 instance=ExtResource("1_fyp8f")]
+
+[node name="PlayerCamera" parent="." unique_id=647930719 instance=ExtResource("2_6sbqx")]

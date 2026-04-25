@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dqvubujshe4w7"]
+
+[ext_resource type="Script" uid="uid://ckni03tyht4st" path="res://src/ui/WorkPlotMenu.cs" id="1_qata1"]
+
+[node name="WorkPlotMenu" type="Control" unique_id=690038517]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qata1")
+
+[node name="GridCoord" type="Label" parent="." unique_id=738503141]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -58.0
+offset_right = 20.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "(0,0)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=973617822]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FarmBed" type="Button" parent="HBoxContainer" unique_id=1143736388]
+layout_mode = 2
+text = "Farm Bed"
+
+[node name="Close" type="Button" parent="." unique_id=685310180]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -94.0
+offset_top = 48.0
+offset_right = -44.0
+offset_bottom = 79.0
+grow_horizontal = 0
+text = "Close"

@@ -1,5 +1,8 @@
-res://assets/farm/items/haystack/
-/home/matt/.local/bin/
-res://scenes/debug/
+res://src/ui/
+res://scenes/ui/
+res://assets/tile_sets/
+res://src/farm/
 res://src/singletons/
+res://assets/farm/items/haystack/
+res://scenes/debug/
 res://

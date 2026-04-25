@@ -1,14 +1,38 @@
 [gd_scene format=4 uid="uid://ch66v5naworwe"]
 
-[ext_resource type="Texture2D" uid="uid://drt0uum3pdexs" path="res://assets/farm/items/haystack/haystack.png" id="1_6uq27"]
+[ext_resource type="TileSet" uid="uid://d2okvgy2o7wil" path="res://assets/tile_sets/GroundTileSet.tres" id="2_4vbi1"]
+[ext_resource type="Script" uid="uid://bl0dt0c6kpd7s" path="res://src/farm/FarmTileMap.cs" id="2_ds6fx"]
+[ext_resource type="Texture2D" uid="uid://dlf0tuk5r50ao" path="res://assets/farm/crops/ground/beet/beet_crop_lifecycle.png" id="4_b5e0r"]
+[ext_resource type="PackedScene" uid="uid://dqvubujshe4w7" path="res://scenes/ui/WorkPlotMenu.tscn" id="4_v5qa6"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ds6fx"]
-texture = ExtResource("1_6uq27")
-0:0/0 = 0
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v5qa6"]
+texture = ExtResource("4_b5e0r")
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_b03sq"]
-sources/1 = SubResource("TileSetAtlasSource_ds6fx")
+[sub_resource type="TileSet" id="TileSet_rwage"]
+sources/1 = SubResource("TileSetAtlasSource_v5qa6")
 
-[node name="FarmTileMap" type="TileMapLayer" unique_id=635726898]
-tile_map_data = PackedByteArray("AAD+/wAAAQAAAAAAAAD//wEAAQAAAAAAAAD//wIAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAABAAMAAQAAAAAAAAABAAIAAQAAAAAAAAABAAEAAQAAAAAAAAACAAEAAQAAAAAAAAACAAAAAQAAAAAAAAACAP//AQAAAAAAAAABAP//AQAAAAAAAAABAP7/AQAAAAAAAAAAAP7/AQAAAAAAAAD///7/AQAAAAAAAAD/////AQAAAAAAAAD//wAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAP//AQAAAAAAAAABAAAAAQAAAAAAAAD+/wIAAQAAAAAAAAD+/wEAAQAAAAAAAAD//wMAAQAAAAAAAAACAAIAAQAAAAAAAAACAP7/AQAAAAAAAAD+////AQAAAAAAAAD+//7/AQAAAAAAAAD+/wMAAQAAAAAAAAACAAMAAQAAAAAAAAA=")
-tile_set = SubResource("TileSet_b03sq")
+[node name="FarmTileMap" type="Node2D" unique_id=2093991614]
+script = ExtResource("2_ds6fx")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1621216685]
+tile_map_data = PackedByteArray("AAAFAAIAAAADAAIAAAAIAAIAAAAFAAIAAAABAAIAAAACAA0AAAABAAEAAAACAA0AAAABAAAAAAACAA0AAAAAAAIAAAACAA0AAAD//wIAAAACAA0AAAD//wEAAAACAA0AAAD//wAAAAACAA0AAAAAAAAAAAACAA0AAAAAAAEAAAACAA0AAAD/////AAACAAwAAAAAAP//AAACAAwAAAABAP//AAACAAwAAAACAAAAAAADAA0AAAACAAEAAAADAA0AAAACAAIAAAADAA0AAAACAAMAAAADAA4AAAAAAAMAAAACAA4AAAABAAMAAAACAA4AAAD//wMAAAACAA4AAAD+/wMAAAABAA4AAAD+/wIAAAABAA0AAAD+/wEAAAABAA0AAAD+/wAAAAABAA0AAAD+////AAABAAwAAAACAP//AAADAAwAAAAFAAEAAAADAAEAAAAFAAMAAAADAAMAAAAGAAEAAAAEAAEAAAAGAAIAAAAEAAIAAAAGAAMAAAAEAAMAAAAHAAEAAAAEAAEAAAAHAAIAAAAEAAIAAAAHAAMAAAAEAAMAAAAIAAEAAAAFAAEAAAAIAAMAAAAFAAMAAAA=")
+tile_set = ExtResource("2_4vbi1")
+
+[node name="TopDirt" type="TileMapLayer" parent="." unique_id=262935500]
+tile_map_data = PackedByteArray("AAAFAAIAAAANAAMAAAAIAAIAAAAOAAMAAAABAAIAAAAOAAMAAAABAAEAAAAOAAMAAAABAAAAAAAOAAMAAAA=")
+tile_set = ExtResource("2_4vbi1")
+
+[node name="Crop" type="TileMapLayer" parent="." unique_id=933354824]
+tile_map_data = PackedByteArray("AAD//wIAAQAAAAEAAAAAAAIAAQABAAEAAAABAAIAAQACAAEAAAD//wEAAQADAAEAAAAAAAEAAQAEAAEAAAABAAEAAQAFAAEAAAA=")
+tile_set = SubResource("TileSet_rwage")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1096970376]
+
+[node name="WorkPlotMenu" parent="CanvasLayer" unique_id=690038517 instance=ExtResource("4_v5qa6")]
+visible = false

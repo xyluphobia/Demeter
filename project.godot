@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.6", "C#", "Mobile")
 
 GameCalendar="*uid://5qn7xoa0heh2"
 InputManager="*uid://b1fffg6ivlnwu"
+FarmManager="*uid://c51ggjjk3ci7c"
 
 [display]
 
@@ -40,5 +41,6 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"

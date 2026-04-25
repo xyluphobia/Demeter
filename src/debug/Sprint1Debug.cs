@@ -41,7 +41,7 @@ public partial class Sprint1Debug : Node
     tapPosLabel.Text = position.ToString();
   }
   
-  private void OnDragging(bool dragging) {
-    draggingLabel.Text = dragging.ToString();
+  private void OnDragging(Vector2 delta) {
+    draggingLabel.Text = (delta != Vector2.Zero).ToString();
   }
 }

@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "c3zt03Fm6d0=",
+  "dgSpecHash": "nSKiPN70zLs=",
   "success": true,
-  "projectFilePath": "/home/matt/Repos/Demeter/Demeter.csproj",
+  "projectFilePath": "C:\\Users\\Matthew\\Documents\\demeter\\Demeter.csproj",
   "expectedPackageFiles": [
-    "/home/matt/.nuget/packages/godot.sourcegenerators/4.6.2/godot.sourcegenerators.4.6.2.nupkg.sha512",
-    "/home/matt/.nuget/packages/godotsharp/4.6.2/godotsharp.4.6.2.nupkg.sha512",
-    "/home/matt/.nuget/packages/godotsharpeditor/4.6.2/godotsharpeditor.4.6.2.nupkg.sha512",
-    "/home/matt/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512"
+    "C:\\Users\\Matthew\\.nuget\\packages\\godot.sourcegenerators\\4.6.2\\godot.sourcegenerators.4.6.2.nupkg.sha512",
+    "C:\\Users\\Matthew\\.nuget\\packages\\godotsharp\\4.6.2\\godotsharp.4.6.2.nupkg.sha512",
+    "C:\\Users\\Matthew\\.nuget\\packages\\godotsharpeditor\\4.6.2\\godotsharpeditor.4.6.2.nupkg.sha512"
   ],
   "logs": []
 }

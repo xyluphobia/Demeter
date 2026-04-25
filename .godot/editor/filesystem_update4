@@ -1,51 +1,17 @@
-res://scenes/debug/Sprint1TestScene.tscn
-res://scenes/debug/Sprint1DebugScene.tscn
+res://scenes/farm/FarmTileMap.tscn
+res://src/resources/InventoryItemResource.cs
+res://src/farm/FarmTileMap.cs
+res://src/singletons/FarmManager.cs
 res://src/singletons/InputManager.cs
 res://src/singletons/GameCalendar.cs
-res://src/resources/CropVarietyResource.cs
 res://src/resources/RecipeInputResource.cs
 res://src/resources/RecipeResource.cs
-res://src/resources/InventoryItemResource.cs
 res://src/debug/Sprint1Debug.cs
-res://src/resources/crops/Strawberry-Chandler.tres
-res://src/resources/crops/Strawberry_Chandler.tres
-res://src/resources/crops/Strawberry/Chandler.tres
-res://src/resources/crops/Strawberry/Albion.tres
-res://src/resources/crops/Strawberry/Seascape.tres
-res://src/resources/crops/Pea/SugarSnap.tres
-res://src/resources/crops/Pea/ThomasLaxton.tres
-res://src/resources/crops/Lettuce/Buttercrunch.tres
-res://src/resources/crops/Lettuce/Rouge d'Hiver.tres
-res://src/resources/crops/Lettuce/Romaine.tres
-res://src/resources/crops/Pea/Thomas Laxton.tres
-res://src/resources/crops/Radish/Cherry Belle.tres
-res://src/resources/crops/Radish/French Breakfast.tres
-res://src/resources/crops/Tomato/Sun Gold.tres
-res://src/resources/crops/Tomato/Roma.tres
-res://src/resources/crops/Tomato/Brandywine Pink.tres
-res://src/resources/crops/Tomato/Black Krim.tres
-res://src/resources/crops/Corn/Golden Bantam.tres
-res://src/resources/crops/Corn/Peaches & Cream.tres
-res://src/resources/crops/Cucumber/Marketmore.tres
-res://src/resources/crops/Cucumber/Lemon Cucumber.tres
-res://src/resources/crops/Pepper/California Wonder.tres
-res://src/resources/crops/Pepper/Banana Pepper.tres
-res://src/resources/crops/Pepper/Jimmy Nardello.tres
-res://src/resources/crops/Apple/Granny Smith.tres
-res://src/resources/crops/Apple/Fuji.tres
-res://src/resources/crops/Apple/Honeycrisp.tres
-res://src/resources/crops/Apple/Cox's Orange Pippin.tres
-res://src/resources/crops/Carrot/Nantes.tres
-res://src/resources/crops/Carrot/Danvers.tres
-res://src/resources/crops/Carrot/Purple Dragon.tres
-res://src/resources/crops/Grape/Concord.tres
-res://src/resources/crops/Grape/Muscat.tres
-res://src/resources/crops/Potato/Yukon Gold.tres
-res://src/resources/crops/Potato/Russet.tres
-res://src/resources/crops/Potato/Red Pontiac.tres
-res://src/resources/crops/Pumpkin/Sugar Pie.tres
-res://src/resources/crops/Pumpkin/Jack-o-Lantern.tres
-res://src/resources/crops/Pumpkin/Jarrahdale.tres
-res://src/resources/crops/Mushroom/Oyster.tres
-res://src/resources/crops/Spinach/Bloomsdale.tres
-res://scenes/farm/FarmTileMap.tscn
+res://src/resources/CropVarietyResource.cs
+res://src/utils/Camera.cs
+res://scenes/player/PlayerCamera.tscn
+res://scenes/debug/Sprint2DebugScene.tscn
+res://scenes/ui/work_plot_menu.tscn
+res://scenes/ui/WorkPlotMenu.tscn
+res://src/ui/WorkPlotMenu.cs
+res://src/plots/LockedPlot.cs
