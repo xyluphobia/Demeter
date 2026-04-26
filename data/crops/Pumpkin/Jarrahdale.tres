@@ -1,5 +1,7 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://rrcvbiaujhis"]
 
+[ext_resource type="Texture2D" uid="uid://go25ih088o1w" path="res://assets/farm/crops/ground/pumpkin/pumpkin_seedpacket_icon.png" id="1_2q01w"]
+[ext_resource type="Texture2D" uid="uid://bkbgegcu66e5b" path="res://assets/farm/crops/ground/pumpkin/pumpkin_crop_lifecycle.png" id="1_c1ais"]
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_gsey7"]
 
 [resource]
@@ -14,4 +16,6 @@ Yield = 60
 ShelfLife = 100
 Resilience = 80
 GrowthSpeed = 40
+SeedPacketTexture = ExtResource("1_2q01w")
+LifeCycleTexture = ExtResource("1_c1ais")
 metadata/_custom_type_script = "uid://uh0bfixhgfay"

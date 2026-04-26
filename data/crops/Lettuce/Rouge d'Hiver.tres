@@ -1,6 +1,8 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://ccq4r36ltl12m"]
 
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_52o7f"]
+[ext_resource type="Texture2D" uid="uid://cw8a5vxtv1yyj" path="res://assets/farm/crops/ground/sunflower/sunflower_crop_lifecycle.png" id="1_nbxjs"]
+[ext_resource type="Texture2D" uid="uid://16tbi057fj17" path="res://assets/farm/crops/ground/sunflower/sunflower_seedpacket_icon.png" id="2_ciak5"]
 
 [resource]
 script = ExtResource("1_52o7f")
@@ -13,4 +15,6 @@ Yield = 80
 ShelfLife = 60
 Resilience = 100
 GrowthSpeed = 60
+SeedPacketTexture = ExtResource("2_ciak5")
+LifeCycleTexture = ExtResource("1_nbxjs")
 metadata/_custom_type_script = "uid://uh0bfixhgfay"

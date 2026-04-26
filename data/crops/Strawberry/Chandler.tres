@@ -1,6 +1,8 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://bg4m7mng0eloq"]
 
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_3vs5t"]
+[ext_resource type="Texture2D" uid="uid://b0ntw06lv8xgt" path="res://assets/farm/crops/ground/strawberry/strawberry_crop_lifecycle.png" id="1_w5bta"]
+[ext_resource type="Texture2D" uid="uid://cylwnpxdumr8w" path="res://assets/farm/crops/ground/strawberry/strawberry_seedpacket_icon.png" id="1_wrbel"]
 
 [resource]
 script = ExtResource("1_3vs5t")
@@ -14,4 +16,6 @@ Yield = 80
 ShelfLife = 20
 Resilience = 40
 GrowthSpeed = 20
+SeedPacketTexture = ExtResource("1_wrbel")
+LifeCycleTexture = ExtResource("1_w5bta")
 metadata/_custom_type_script = "uid://uh0bfixhgfay"

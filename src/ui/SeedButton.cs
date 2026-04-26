@@ -3,6 +3,8 @@ using System;
 
 public partial class SeedButton : Button
 {
+  [Signal] public delegate void SeedPressedEventHandler(CropVarietyResource crop);
+
   private CropVarietyResource _crop;
 
   public void Setup(CropVarietyResource crop)
@@ -12,12 +14,15 @@ public partial class SeedButton : Button
       return;
     }
   
-    // GetNode<TextureRect>("TextureRect").Texture = /* crop texture */;
+    if (crop.SeedPacketTexture != null) {
+      GetNode<TextureRect>("SeedIcon").Texture = crop.SeedPacketTexture;
+      this.Icon = null;
+    }
     _crop = crop;
     this.Pressed += OnSeedButtonPressed;
   }
 
   private void OnSeedButtonPressed() {
-    
+    EmitSignal(SignalName.SeedPressed, _crop);
   }
 }

@@ -24,4 +24,9 @@ public partial class CropVarietyResource : Resource
   [Export(PropertyHint.Range, "1,100")] public int ShelfLife { get; set; }
   [Export(PropertyHint.Range, "1,100")] public int Resilience { get; set; }
   [Export(PropertyHint.Range, "1,100")] public int GrowthSpeed { get; set; }
+
+  [ExportCategory("Visuals")]
+  [Export] public Texture2D SeedPacketTexture { get; set; }
+  [Export] public Texture2D LifeCycleTexture { get; set; }
+  [Export] public int MaxTextureHeight { get; set; }
 }

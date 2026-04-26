@@ -1,6 +1,8 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://dcwfixfu3guch"]
 
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_0ff1l"]
+[ext_resource type="Texture2D" uid="uid://ckrftrwtk7ysl" path="res://assets/farm/crops/ground/radish/radish_crop_lifecycle.png" id="1_1y5n5"]
+[ext_resource type="Texture2D" uid="uid://bdrd8wmmwi11s" path="res://assets/farm/crops/ground/radish/radish_seedpacket_icon.png" id="1_mxl7n"]
 
 [resource]
 script = ExtResource("1_0ff1l")
@@ -13,4 +15,6 @@ Yield = 80
 ShelfLife = 60
 Resilience = 80
 GrowthSpeed = 80
+SeedPacketTexture = ExtResource("1_mxl7n")
+LifeCycleTexture = ExtResource("1_1y5n5")
 metadata/_custom_type_script = "uid://uh0bfixhgfay"

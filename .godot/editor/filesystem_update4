@@ -1,25 +1,61 @@
-res://scenes/farm/FarmTileMap.tscn
-res://src/resources/InventoryItemResource.cs
+res://scenes/ui/JournalUI.tscn
+res://assets/tile_sets/GroundTileSet.tres
+res://data/CropRegistry.tres
+res://src/resources/CropRegistryResource.cs
+res://src/ui/PlantStatBar.cs
+res://src/ui/SeedButton.cs
+res://src/ui/SeedGrid.cs
+res://src/ui/JournalUi.cs
+res://src/utils/Camera.cs
+res://src/ui/WorkPlotMenu.cs
 res://src/farm/FarmTileMap.cs
 res://src/singletons/FarmManager.cs
 res://src/singletons/InputManager.cs
 res://src/singletons/GameCalendar.cs
-res://src/resources/RecipeInputResource.cs
+res://src/resources/InventoryItemResource.cs
 res://src/resources/RecipeResource.cs
 res://src/debug/Sprint1Debug.cs
 res://src/resources/CropVarietyResource.cs
-res://src/utils/Camera.cs
-res://scenes/player/PlayerCamera.tscn
+res://src/resources/RecipeInputResource.cs
+res://data/crops/Apple/Cox's Orange Pippin.tres
+res://data/crops/Apple/Fuji.tres
+res://data/crops/Apple/Granny Smith.tres
+res://data/crops/Apple/Honeycrisp.tres
+res://data/crops/Carrot/Danvers.tres
+res://data/crops/Carrot/Nantes.tres
+res://data/crops/Carrot/Purple Dragon.tres
+res://data/crops/Corn/Golden Bantam.tres
+res://data/crops/Corn/Peaches & Cream.tres
+res://data/crops/Cucumber/Lemon Cucumber.tres
+res://data/crops/Cucumber/Marketmore.tres
+res://data/crops/Grape/Concord.tres
+res://data/crops/Grape/Muscat.tres
+res://data/crops/Lettuce/Buttercrunch.tres
+res://data/crops/Lettuce/Romaine.tres
+res://data/crops/Lettuce/Rouge d'Hiver.tres
+res://data/crops/Mushroom/Oyster.tres
+res://data/crops/Pea/SugarSnap.tres
+res://data/crops/Pea/Thomas Laxton.tres
+res://data/crops/Pepper/Banana Pepper.tres
+res://data/crops/Pepper/California Wonder.tres
+res://data/crops/Pepper/Jimmy Nardello.tres
+res://data/crops/Potato/Red Pontiac.tres
+res://data/crops/Potato/Russet.tres
+res://data/crops/Potato/Yukon Gold.tres
+res://data/crops/Pumpkin/Jack-o-Lantern.tres
+res://data/crops/Pumpkin/Jarrahdale.tres
+res://data/crops/Pumpkin/Sugar Pie.tres
+res://data/crops/Radish/Cherry Belle.tres
+res://data/crops/Radish/French Breakfast.tres
+res://data/crops/Spinach/Bloomsdale.tres
+res://data/crops/Strawberry/Albion.tres
+res://data/crops/Strawberry/Chandler.tres
+res://data/crops/Strawberry/Seascape.tres
+res://data/crops/Tomato/Black Krim.tres
+res://data/crops/Tomato/Brandywine Pink.tres
+res://data/crops/Tomato/Roma.tres
+res://data/crops/Tomato/Sun Gold.tres
 res://scenes/debug/Sprint2DebugScene.tscn
-res://scenes/ui/work_plot_menu.tscn
+res://scenes/debug/Sprint3DebugScene.tscn
 res://scenes/ui/WorkPlotMenu.tscn
-res://src/ui/WorkPlotMenu.cs
-res://src/plots/LockedPlot.cs
-res://scenes/ui/JournalUI.tscn
-res://src/ui/JournalUi.cs
-res://scenes/ui/SeedButton.tscn
-res://src/ui/SeedButton.cs
-res://src/ui/SeedGrid.cs
-res://src/resources/CropRegistry.cs
-res://src/resources/CropRegistryResource.cs
-res://data/CropRegistry.tres
+res://scenes/farm/FarmTileMap.tscn

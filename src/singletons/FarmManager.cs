@@ -6,6 +6,8 @@ public partial class FarmManager : Node
 {
   public static FarmManager I { get; private set; }
 
+  [Signal] public delegate void PlantingAttemptingEventHandler(Vector2I position);
+  [Signal] public delegate void PlantCropEventHandler(Vector2I position, CropVarietyResource crop);
 
   private Dictionary<Vector2I, PlotObject> grid = new();
      

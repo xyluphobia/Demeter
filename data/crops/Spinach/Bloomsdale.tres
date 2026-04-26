@@ -1,5 +1,7 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://kuklleyd8akf"]
 
+[ext_resource type="Texture2D" uid="uid://d2l2ln5xlyd7n" path="res://assets/farm/crops/ground/spinach/spinach_seedpacket_icon.png" id="1_0r8cm"]
+[ext_resource type="Texture2D" uid="uid://dx4xv2xqdhmbo" path="res://assets/farm/crops/ground/spinach/spinach_crop_lifecycle.png" id="1_bq4fb"]
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_gwfty"]
 
 [resource]
@@ -15,4 +17,6 @@ Yield = 100
 ShelfLife = 40
 Resilience = 100
 GrowthSpeed = 80
+SeedPacketTexture = ExtResource("1_0r8cm")
+LifeCycleTexture = ExtResource("1_bq4fb")
 metadata/_custom_type_script = "uid://uh0bfixhgfay"

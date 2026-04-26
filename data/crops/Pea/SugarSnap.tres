@@ -1,6 +1,8 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://dpnk08o1sjxqw"]
 
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_75r58"]
+[ext_resource type="Texture2D" uid="uid://wwtdv216kwuo" path="res://assets/farm/crops/ground/peas/peas_crop_lifecycle.png" id="1_b003s"]
+[ext_resource type="Texture2D" uid="uid://c5w5teo7525tp" path="res://assets/farm/crops/ground/peas/peas_seedpacket_icon.png" id="1_rsn0t"]
 
 [resource]
 script = ExtResource("1_75r58")
@@ -14,4 +16,7 @@ Yield = 80
 ShelfLife = 40
 Resilience = 80
 GrowthSpeed = 60
+SeedPacketTexture = ExtResource("1_rsn0t")
+LifeCycleTexture = ExtResource("1_b003s")
+MaxTextureHeight = 26
 metadata/_custom_type_script = "uid://uh0bfixhgfay"

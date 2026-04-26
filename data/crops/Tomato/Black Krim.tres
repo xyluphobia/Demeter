@@ -1,5 +1,7 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://b0pkpnyux87gx"]
 
+[ext_resource type="Texture2D" uid="uid://v41t0ng6yr4" path="res://assets/farm/crops/ground/tomato/tomato_crop_lifecycle.png" id="1_0w7yv"]
+[ext_resource type="Texture2D" uid="uid://d1o4r31gu4tr7" path="res://assets/farm/crops/ground/tomato/tomato_seedpacket_icon.png" id="1_aucn0"]
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_mcb2j"]
 
 [resource]
@@ -16,4 +18,6 @@ Yield = 60
 ShelfLife = 40
 Resilience = 60
 GrowthSpeed = 40
+SeedPacketTexture = ExtResource("1_aucn0")
+LifeCycleTexture = ExtResource("1_0w7yv")
 metadata/_custom_type_script = "uid://uh0bfixhgfay"

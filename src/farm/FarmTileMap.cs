@@ -3,9 +3,6 @@ using System;
 
 public partial class FarmTileMap : Node2D
 {
-  public static FarmTileMap I { get; private set; }
-
-
   private TileMapLayer groundLayer;
   private TileMapLayer topDirtLayer;
   private TileMapLayer cropLayer;
@@ -14,8 +11,6 @@ public partial class FarmTileMap : Node2D
 
 	public override void _Ready()
 	{
-    I = this;
-
     groundLayer = GetNode<TileMapLayer>("Ground");
     topDirtLayer = GetNode<TileMapLayer>("TopDirt");
     cropLayer = GetNode<TileMapLayer>("Crop");
@@ -23,6 +18,7 @@ public partial class FarmTileMap : Node2D
     WorkPlotMenu = GetNode<WorkPlotMenu>("CanvasLayer/WorkPlotMenu");
 
     InputManager.I.Tapped += OnTapped;
+    FarmManager.I.PlantCrop += OnPlantCrop;
 	}
 
 
@@ -36,7 +32,6 @@ public partial class FarmTileMap : Node2D
     }
 
     PlotObject? plot = FarmManager.I.GetGridPlot(tappedGridPos);
-    GD.Print(plot);
     if (plot == null) {
       WorkPlotMenu.Visible = true;
       WorkPlotMenu.activeGridPos = tappedGridPos;
@@ -44,9 +39,21 @@ public partial class FarmTileMap : Node2D
   }
 
 
-  public void PlantCrop(Vector2I position) {
-    cropLayer.SetCell(position, 1, new Vector2I(0, 1));
-    GD.Print("planted");
+  private void OnPlantCrop(Vector2I position, CropVarietyResource crop) {
+    Vector2 worldPos = groundLayer.MapToLocal(position);
+
+    Sprite2D sprite = new Sprite2D();
+    sprite.Texture = crop.LifeCycleTexture;
+
+    sprite.RegionEnabled = true;
+    sprite.RegionRect = new Rect2(0, 0, 16, crop.LifeCycleTexture.GetHeight());
+    sprite.Position = worldPos;
+    AddChild(sprite);
+
+    FarmManager.I.SetGridPlot(new FarmBedPlot(position) {
+      CropSprite = sprite,
+      Crop = crop,
+    });
   }
 
   private void WaterPlot(Vector2I position) {

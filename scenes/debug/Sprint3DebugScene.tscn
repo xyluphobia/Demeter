@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c3jom5mrp6im0"]
+
+[ext_resource type="PackedScene" uid="uid://ch66v5naworwe" path="res://scenes/farm/FarmTileMap.tscn" id="1_uqy40"]
+[ext_resource type="PackedScene" uid="uid://bamevyqgg57nb" path="res://scenes/player/PlayerCamera.tscn" id="2_o1bo5"]
+[ext_resource type="PackedScene" uid="uid://b108xlxobfj7r" path="res://scenes/ui/JournalUI.tscn" id="3_o1bo5"]
+
+[node name="Sprint3DebugScene" type="Node2D" unique_id=2009820036]
+
+[node name="FarmTileMap" parent="." unique_id=2093991614 instance=ExtResource("1_uqy40")]
+
+[node name="PlayerCamera" parent="." unique_id=647930719 instance=ExtResource("2_o1bo5")]
+
+[node name="JournalUI" parent="." unique_id=1485079148 instance=ExtResource("3_o1bo5")]
+visible = false

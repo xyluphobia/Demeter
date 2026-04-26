@@ -9,15 +9,30 @@ public partial class JournalUi : CanvasLayer
   private SeedGrid _seedGridLeft;
   private SeedGrid _seedGridRight;
 
+  private Control _seedDetails;
+  private CropVarietyResource _crop;
+  private Vector2I _activeGridPos;
+
   private CropVarietyResource[][] _pages;
   private int _pageIndex = 0;
 
   private const int SeedsPerPage = 9;
 
-	public override void _Ready()
-	{
+	public override void _Ready() {
+    FarmManager.I.PlantingAttempting += (Vector2I position) => {
+      this.Visible = true;
+      _activeGridPos = position;
+    };
+
     _seedGridLeft = GetNode<SeedGrid>("BookBaseContainer/LeftPage/MarginContainer/SeedGridLeft");
     _seedGridRight = GetNode<SeedGrid>("BookBaseContainer/RightPage/MarginContainer/SeedGridRight");
+
+    _seedGridLeft.SeedPressed  += OnSeedPressed;
+    _seedGridRight.SeedPressed += OnSeedPressed;
+
+    _seedDetails = GetNode<Control>("BookBaseContainer/RightPage/SeedDetails");
+    _seedDetails.GetNode<TextureButton>("SeedDetailsFreeMove/ActionButtons/CancelButton").Pressed += () => _seedDetails.Visible = false;
+    _seedDetails.GetNode<TextureButton>("SeedDetailsFreeMove/ActionButtons/PlantButton").Pressed += OnPlantCrop;
 
     GetNode<Button>("BookBaseContainer/LeftPage/PrevPage").Pressed += OnPrevPage;
     GetNode<Button>("BookBaseContainer/RightPage/NextPage").Pressed += OnNextPage;
@@ -80,5 +95,49 @@ public partial class JournalUi : CanvasLayer
       _pageIndex -= 2;
       RefreshPages();
     }
+  }
+
+  private void OnSeedPressed(CropVarietyResource crop)
+  {
+    _crop = crop;
+    _seedDetails.Visible = true;
+    
+    var freeMove = _seedDetails.GetNode<Control>("SeedDetailsFreeMove/");
+    freeMove.GetNode<Label>("Name/Variety").Text                    = crop.Name;
+    freeMove.GetNode<Label>("Name/Plant").Text                      = crop.Plant.ToString();
+    freeMove.GetNode<Label>("RightStats/TimeToMaturity/TimeToMaturity").Text   = crop.MaturityDays.ToString();
+    freeMove.GetNode<Label>("RightStats/SellPrice/SellPrice").Text             = crop.BaseSellPrice.ToString();
+    freeMove.GetNode<PlantStatBar>("Stats").Populate(crop);
+
+    var cropImage = freeMove.GetNode<TextureRect>("Container/PlantImage");
+    var lifeCycleAtlas = new AtlasTexture();
+    lifeCycleAtlas.Atlas = crop.LifeCycleTexture;
+    lifeCycleAtlas.Region = new Rect2(4 * 16, 0, 16, crop.LifeCycleTexture.GetHeight()); // frame 6 = mature
+    lifeCycleAtlas.FilterClip = true;
+    cropImage.Texture = lifeCycleAtlas;
+
+    var seasonIcon = freeMove.GetNode<TextureRect>("Banner/VBoxContainer/BackDropSeason/SeasonIcon");
+    var seasonAtlas = (AtlasTexture)seasonIcon.Texture.Duplicate();
+    seasonAtlas.Region = crop.Season switch
+    {
+        Seasons.AUTUMN => new Rect2(20, 3,  9, 10),
+        Seasons.SPRING => new Rect2(3,  20, 9, 9),
+        Seasons.WINTER => new Rect2(20, 20, 9, 9),
+        _              => new Rect2(3,  3,  9, 9),
+    };
+    seasonIcon.Texture = seasonAtlas;
+
+    var harvestIcon = freeMove.GetNode<TextureRect>("Banner/VBoxContainer/BackDropHarvest/HarvestIcon");
+    var atlas = (AtlasTexture)harvestIcon.Texture.Duplicate();
+    atlas.Region = crop.HarvestType == HarvestTypes.REPEAT
+        ? new Rect2(10, 0, 10, 11)  // second icon
+        : new Rect2(0, 0, 10, 11);  // first icon
+    harvestIcon.Texture = atlas;
+  }
+  
+  private void OnPlantCrop() {
+    FarmManager.I.EmitSignal(FarmManager.SignalName.PlantCrop, _activeGridPos, _crop);
+    _seedDetails.Visible = false;
+    this.Visible = false;
   }
 }

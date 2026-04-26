@@ -1,6 +1,12 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://c7fi8r8w2dgtm"]
 
+[ext_resource type="Texture2D" uid="uid://c6vwpdf65bwm4" path="res://assets/farm/crops/trees/apple/apple_tree_crop_lifecycle.png" id="1_arncg"]
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_yd68r"]
+[ext_resource type="Texture2D" uid="uid://p4b445sabjwc" path="res://assets/farm/produce/tree_crops/apple_tree_produce.png" id="2_arncg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaghf"]
+atlas = ExtResource("2_arncg")
+region = Rect2(0, 0, 15, 16)
 
 [resource]
 script = ExtResource("1_yd68r")
@@ -15,4 +21,7 @@ Yield = 80
 ShelfLife = 100
 Resilience = 80
 GrowthSpeed = 20
+SeedPacketTexture = SubResource("AtlasTexture_qaghf")
+LifeCycleTexture = ExtResource("1_arncg")
+MaxTextureHeight = 25
 metadata/_custom_type_script = "uid://uh0bfixhgfay"

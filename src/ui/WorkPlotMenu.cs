@@ -17,8 +17,7 @@ public partial class WorkPlotMenu : Control
   }
 
   private void OnFarmBedPressed() {
-    FarmManager.I.SetGridPlot(new FarmBedPlot(GridPosition: activeGridPos));
-    FarmTileMap.I.PlantCrop(activeGridPos);
+    FarmManager.I.EmitSignal(FarmManager.SignalName.PlantingAttempting, activeGridPos);
     ResetMenu();
   }
 

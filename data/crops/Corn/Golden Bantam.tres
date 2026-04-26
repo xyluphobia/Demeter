@@ -1,6 +1,8 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://cs0jg6lum4wy2"]
 
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_f3qna"]
+[ext_resource type="Texture2D" uid="uid://b7jqymwni2ng6" path="res://assets/farm/crops/ground/corn/corn_crop_lifecycle.png" id="1_qtxjh"]
+[ext_resource type="Texture2D" uid="uid://1q513sipu45b" path="res://assets/farm/crops/ground/corn/corn_seedpacket_icon.png" id="1_y0ueq"]
 
 [resource]
 script = ExtResource("1_f3qna")
@@ -13,4 +15,7 @@ Yield = 80
 ShelfLife = 20
 Resilience = 60
 GrowthSpeed = 40
+SeedPacketTexture = ExtResource("1_y0ueq")
+LifeCycleTexture = ExtResource("1_qtxjh")
+MaxTextureHeight = 30
 metadata/_custom_type_script = "uid://uh0bfixhgfay"

@@ -1,6 +1,8 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://cgg54l7yr1p8q"]
 
+[ext_resource type="Texture2D" uid="uid://b8wh6wdd0glno" path="res://assets/farm/crops/ground/potatos/potato_crop_lifecycle.png" id="1_jepp7"]
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_ptfh3"]
+[ext_resource type="Texture2D" uid="uid://dbus64jt3ej4w" path="res://assets/farm/crops/ground/potatos/potato_seedpacket_icon.png" id="1_u07bs"]
 
 [resource]
 script = ExtResource("1_ptfh3")
@@ -14,4 +16,6 @@ Yield = 80
 ShelfLife = 80
 Resilience = 80
 GrowthSpeed = 20
+SeedPacketTexture = ExtResource("1_u07bs")
+LifeCycleTexture = ExtResource("1_jepp7")
 metadata/_custom_type_script = "uid://uh0bfixhgfay"

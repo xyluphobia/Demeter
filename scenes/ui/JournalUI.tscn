@@ -1,13 +1,23 @@
 [gd_scene format=3 uid="uid://b108xlxobfj7r"]
 
-[ext_resource type="Texture2D" uid="uid://bftieejus8xi5" path="res://assets/ui/ui_books/books.png" id="1_63ixx"]
-[ext_resource type="Script" uid="uid://o7kxyu0bi4k2" path="res://src/ui/JournalUi.cs" id="1_h84i5"]
+[ext_resource type="Script" uid="uid://dbksjvt1mcw38" path="res://src/ui/JournalUi.cs" id="1_h84i5"]
 [ext_resource type="Resource" uid="uid://df7g707a073lf" path="res://data/CropRegistry.tres" id="2_8h443"]
+[ext_resource type="Texture2D" uid="uid://d4nlc0h4xlixy" path="res://assets/ui/icons/8x8_game_icons.png" id="2_fa0tw"]
 [ext_resource type="Texture2D" uid="uid://dc7gl3a4mqttb" path="res://assets/ui/ui_banners/banners_horizontal.png" id="2_stqb7"]
 [ext_resource type="Script" uid="uid://5chnacof6bno" path="res://src/ui/SeedGrid.cs" id="3_8h443"]
+[ext_resource type="Texture2D" uid="uid://dmr6q7j8fswy8" path="res://assets/ui/ui_books/SeedJournal.png" id="3_bch43"]
 [ext_resource type="Texture2D" uid="uid://jwuvffvb86cs" path="res://assets/ui/icons/Seasons.png" id="3_fa0tw"]
 [ext_resource type="PackedScene" uid="uid://dih35et2nlcvc" path="res://scenes/ui/SeedButton.tscn" id="3_rx0bv"]
 [ext_resource type="Texture2D" uid="uid://cxq43vvok6khq" path="res://assets/ui/ui_grids/grid_icons.png" id="8_ush5w"]
+[ext_resource type="Texture2D" uid="uid://bqoydr000lulo" path="res://assets/ui/ui_container_panels/container_panels.png" id="9_5suib"]
+[ext_resource type="Texture2D" uid="uid://lxqnaor237l2" path="res://assets/farm/crops/ground/cabbage_red/redcabbage_crop_lifecycle.png" id="10_wkmhq"]
+[ext_resource type="Texture2D" uid="uid://c3pqmgixob5vs" path="res://assets/ui/bars/PlantStatBar.png" id="12_78dfu"]
+[ext_resource type="Script" uid="uid://bxve30lyqa6br" path="res://src/ui/PlantStatBar.cs" id="12_v6ffx"]
+[ext_resource type="Texture2D" uid="uid://c478ydqx4mbbs" path="res://assets/ui/icons/16x16_game_icons.png" id="13_fw1ao"]
+[ext_resource type="Texture2D" uid="uid://rori0ej743cn" path="res://assets/ui/text/OneOrMany.png" id="13_mlqd4"]
+[ext_resource type="Texture2D" uid="uid://bg7nydvbliq3n" path="res://assets/ui/ui_buttons/buttons.png" id="14_tv62c"]
+[ext_resource type="Texture2D" uid="uid://8codmskaxxf5" path="res://assets/ui/ui_banners/banners_vertical.png" id="16_xf64j"]
+[ext_resource type="Texture2D" uid="uid://cfttae5vm63e0" path="res://assets/ui/icons/card_value_icons.png" id="17_48oqh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stqb7"]
 texture = ExtResource("2_stqb7")
@@ -75,9 +85,93 @@ region = Rect2(3, 22, 9, 6)
 atlas = ExtResource("8_ush5w")
 region = Rect2(52, 36, 6, 8)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6ffx"]
+atlas = ExtResource("10_wkmhq")
+region = Rect2(64, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvhbg"]
+atlas = ExtResource("16_xf64j")
+region = Rect2(180, 178, 9, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv2tm"]
+atlas = ExtResource("17_48oqh")
+region = Rect2(18, 130, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e0m3"]
+atlas = ExtResource("3_fa0tw")
+region = Rect2(20, 20, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op8nv"]
+atlas = ExtResource("13_mlqd4")
+region = Rect2(0, 0, 10, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxo1k"]
+atlas = ExtResource("13_fw1ao")
+region = Rect2(20, 50, 9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fw1ao"]
+atlas = ExtResource("12_78dfu")
+region = Rect2(0, 0, 43, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf64j"]
+atlas = ExtResource("12_78dfu")
+region = Rect2(0, 7, 43, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s782h"]
+atlas = ExtResource("13_fw1ao")
+region = Rect2(100, 2, 9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uy601"]
+atlas = ExtResource("13_fw1ao")
+region = Rect2(19, 18, 9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfbcy"]
+atlas = ExtResource("13_fw1ao")
+region = Rect2(36, 34, 9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkmhq"]
+atlas = ExtResource("2_fa0tw")
+region = Rect2(88, 8, 7, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78dfu"]
+atlas = ExtResource("2_fa0tw")
+region = Rect2(80, 8, 7, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwdmy"]
+atlas = ExtResource("14_tv62c")
+region = Rect2(74, 914, 20, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sfgv"]
+atlas = ExtResource("14_tv62c")
+region = Rect2(74, 1010, 20, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0q2u"]
+atlas = ExtResource("14_tv62c")
+region = Rect2(74, 962, 20, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48oqh"]
+atlas = ExtResource("14_tv62c")
+region = Rect2(74, 698, 20, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6skxy"]
+atlas = ExtResource("14_tv62c")
+region = Rect2(74, 794, 20, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlqd4"]
+atlas = ExtResource("14_tv62c")
+region = Rect2(74, 746, 20, 14)
+
 [node name="JournalUI" type="CanvasLayer" unique_id=1485079148]
 script = ExtResource("1_h84i5")
 CropRegistry = ExtResource("2_8h443")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1254034410]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5176471)
 
 [node name="BookBaseContainer" type="HBoxContainer" parent="." unique_id=565088989]
 anchors_preset = 8
@@ -85,24 +179,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -62.0
-offset_top = -34.0
-offset_right = 62.0
-offset_bottom = 34.0
+offset_left = -485.0
+offset_top = -283.0
+offset_right = 485.8169
+offset_bottom = 255.5
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(8.6, 8.6)
 pivot_offset = Vector2(62, 34)
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 0
 
 [node name="LeftPage" type="NinePatchRect" parent="BookBaseContainer" unique_id=838084832]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("1_63ixx")
-region_rect = Rect2(123, 237, 24, 26)
-patch_margin_left = 24
-patch_margin_top = 3
-patch_margin_bottom = 6
+texture = ExtResource("3_bch43")
+region_rect = Rect2(0, 0, 192, 206)
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_bottom = 47
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
@@ -113,10 +208,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 1
-theme_override_constants/margin_bottom = 7
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_bottom = 46
 
 [node name="SeedGridLeft" type="GridContainer" parent="BookBaseContainer/LeftPage/MarginContainer" unique_id=2107815848]
 layout_mode = 2
@@ -128,15 +222,16 @@ SeedButtonScene = ExtResource("3_rx0bv")
 
 [node name="Summer" type="Button" parent="BookBaseContainer/LeftPage" unique_id=1073258934]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -9.627905
-offset_top = -29.999996
-offset_right = 2.872095
-offset_bottom = -19.999996
-grow_vertical = 2
+offset_left = -83.0
+offset_top = 34.0
+offset_right = -70.5
+offset_bottom = 44.0
+scale = Vector2(8, 8)
 theme_override_styles/normal = SubResource("StyleBoxTexture_stqb7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_stqb7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_stqb7")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_stqb7")
+theme_override_styles/focus = SubResource("StyleBoxTexture_stqb7")
 
 [node name="Sun" type="TextureRect" parent="BookBaseContainer/LeftPage/Summer" unique_id=553272449]
 layout_mode = 1
@@ -157,11 +252,16 @@ stretch_mode = 5
 
 [node name="Autumn" type="Button" parent="BookBaseContainer/LeftPage" unique_id=442306833]
 layout_mode = 0
-offset_left = -9.7441845
-offset_top = 15.39535
-offset_right = 2.6976757
-offset_bottom = 25.395351
+offset_left = -79.0
+offset_top = 144.0
+offset_right = -66.558136
+offset_bottom = 154.0
+scale = Vector2(8, 8)
 theme_override_styles/normal = SubResource("StyleBoxTexture_1ypv5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1ypv5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ypv5")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_1ypv5")
+theme_override_styles/focus = SubResource("StyleBoxTexture_1ypv5")
 
 [node name="Leaf" type="TextureRect" parent="BookBaseContainer/LeftPage/Autumn" unique_id=682828528]
 layout_mode = 1
@@ -185,12 +285,17 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -10.32558
-offset_top = -7.4418583
-offset_right = 2.8139544
-offset_bottom = 2.5581436
+offset_left = -85.0
+offset_top = -38.0
+offset_right = -71.860466
+offset_bottom = -28.0
 grow_vertical = 2
+scale = Vector2(8, 8)
 theme_override_styles/normal = SubResource("StyleBoxTexture_h84i5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h84i5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h84i5")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_h84i5")
+theme_override_styles/focus = SubResource("StyleBoxTexture_h84i5")
 
 [node name="Snow" type="TextureRect" parent="BookBaseContainer/LeftPage/Winter" unique_id=1605149789]
 layout_mode = 1
@@ -214,12 +319,17 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = -9.162789
-offset_top = 3.4883728
-offset_right = 2.930234
-offset_bottom = 13.488373
+offset_left = -79.0
+offset_top = 64.0
+offset_right = -66.906975
+offset_bottom = 74.0
 grow_vertical = 2
+scale = Vector2(8, 8)
 theme_override_styles/normal = SubResource("StyleBoxTexture_fa0tw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fa0tw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fa0tw")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_fa0tw")
+theme_override_styles/focus = SubResource("StyleBoxTexture_fa0tw")
 
 [node name="Sprout" type="TextureRect" parent="BookBaseContainer/LeftPage/Spring" unique_id=1490218187]
 layout_mode = 1
@@ -243,11 +353,12 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 3.39535
-offset_top = -9.232559
-offset_right = 9.8953495
-offset_bottom = -3.2325592
+offset_left = 6.720927
+offset_top = -10.627869
+offset_right = 13.220926
+offset_bottom = -4.6278687
 grow_vertical = 0
+scale = Vector2(8, 8)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5suib")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_bch43")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_wkmhq")
@@ -260,6 +371,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.9098835
+offset_top = -8.296516
+offset_right = 2.909884
+offset_bottom = -8.296516
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_tv62c")
@@ -268,23 +383,23 @@ stretch_mode = 5
 
 [node name="Spine" type="NinePatchRect" parent="BookBaseContainer" unique_id=1598154374]
 layout_mode = 2
-texture = ExtResource("1_63ixx")
-region_rect = Rect2(147, 237, 9, 26)
-patch_margin_left = 5
-patch_margin_top = 3
-patch_margin_right = 5
-patch_margin_bottom = 6
+texture = ExtResource("3_bch43")
+region_rect = Rect2(192, 0, 72, 206)
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 47
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
 [node name="RightPage" type="NinePatchRect" parent="BookBaseContainer" unique_id=2069157737]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("1_63ixx")
-region_rect = Rect2(156, 237, 25, 26)
-patch_margin_top = 3
-patch_margin_right = 24
-patch_margin_bottom = 6
+texture = ExtResource("3_bch43")
+region_rect = Rect2(264, 0, 200, 206)
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 46
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
@@ -295,10 +410,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 1
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 7
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 46
 
 [node name="SeedGridRight" type="GridContainer" parent="BookBaseContainer/RightPage/MarginContainer" unique_id=1920220795]
 layout_mode = 2
@@ -313,11 +427,12 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 47.09302
-offset_top = -9.232559
-offset_right = 53.59302
-offset_bottom = -3.2325592
+offset_left = 371.0
+offset_top = -75.0
+offset_right = 377.5
+offset_bottom = -69.0
 grow_vertical = 0
+scale = Vector2(8, 8)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5suib")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_bch43")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_wkmhq")
@@ -336,3 +451,444 @@ texture = SubResource("AtlasTexture_tv62c")
 expand_mode = 1
 stretch_mode = 5
 flip_h = true
+
+[node name="SeedDetails" type="Control" parent="BookBaseContainer/RightPage" unique_id=881761294]
+visible = false
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 5.0
+offset_right = 448.0
+offset_bottom = 531.0
+
+[node name="SeedDetailsFreeMove" type="Control" parent="BookBaseContainer/RightPage/SeedDetails" unique_id=417380035]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 103.0
+offset_right = -89.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SeedDetailBase" type="VBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove" unique_id=1007695223]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = -100.0
+offset_right = -260.5
+offset_bottom = -466.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(8, 8)
+theme_override_constants/separation = 0
+
+[node name="Top" type="NinePatchRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/SeedDetailBase" unique_id=1362561489]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("9_5suib")
+region_rect = Rect2(528, 687, 48, 40)
+patch_margin_left = 1
+patch_margin_top = 3
+patch_margin_right = 2
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Bottom" type="NinePatchRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/SeedDetailBase" unique_id=1261301602]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("9_5suib")
+region_rect = Rect2(528, 727, 48, 41)
+patch_margin_left = 1
+patch_margin_top = 4
+patch_margin_right = 2
+patch_margin_bottom = 3
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="SeedDetailsInfo" type="VBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/SeedDetailBase/Bottom" unique_id=1603682776]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.3953471
+offset_top = 2.6744163
+offset_right = -1.6744232
+offset_bottom = -1.372097
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="HBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove" unique_id=183256944]
+layout_mode = 0
+offset_left = 64.0
+offset_top = -80.0
+offset_right = 244.0
+offset_bottom = -40.0
+
+[node name="Variety" type="Label" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Name" unique_id=2014917696]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.96569306, 0.91107273, 0.809031, 1)
+theme_override_font_sizes/font_size = 24
+text = "Red Acre"
+
+[node name="Plant" type="Label" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Name" unique_id=124267160]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.88, 0.7208667, 0.60719997, 1)
+theme_override_font_sizes/font_size = 16
+text = "Cabbage"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Container" type="Control" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove" unique_id=410038217]
+anchors_preset = 0
+offset_left = 68.0
+offset_top = -46.0
+offset_right = 383.0
+offset_bottom = 58.0
+
+[node name="PlantImage" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Container" unique_id=1648686143]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 11.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_v6ffx")
+stretch_mode = 5
+
+[node name="Banner" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove" unique_id=596144176]
+layout_mode = 0
+offset_left = 316.0
+offset_top = -84.0
+offset_right = 374.0
+offset_bottom = 52.0
+texture = SubResource("AtlasTexture_mvhbg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Banner" unique_id=1334595146]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 12.0
+offset_right = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="BackDropSeason" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Banner/VBoxContainer" unique_id=1779499727]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = SubResource("AtlasTexture_gv2tm")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="SeasonIcon" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Banner/VBoxContainer/BackDropSeason" unique_id=730131729]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_4e0m3")
+stretch_mode = 6
+
+[node name="BackDropHarvest" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Banner/VBoxContainer" unique_id=1733838253]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = SubResource("AtlasTexture_gv2tm")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HarvestIcon" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Banner/VBoxContainer/BackDropHarvest" unique_id=749100613]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_op8nv")
+stretch_mode = 6
+
+[node name="Stats" type="VBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove" unique_id=1921517735]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 65.0
+offset_top = 87.0
+offset_right = -58.0
+offset_bottom = -164.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_v6ffx")
+
+[node name="Flavour" type="HBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats" unique_id=1522760574]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Flavour" unique_id=778595789]
+layout_mode = 2
+texture = SubResource("AtlasTexture_mxo1k")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PlantStatBar" type="Control" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Flavour" unique_id=960493975]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+
+[node name="BarBackground" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Flavour/PlantStatBar" unique_id=930392094]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_fw1ao")
+stretch_mode = 5
+
+[node name="BarFill" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Flavour/PlantStatBar" unique_id=30273288]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_xf64j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Yield" type="HBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats" unique_id=1392257]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Yield" unique_id=1106006025]
+layout_mode = 2
+texture = SubResource("AtlasTexture_s782h")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PlantStatBar" type="Control" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Yield" unique_id=210541133]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+
+[node name="BarBackground" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Yield/PlantStatBar" unique_id=1226137275]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_fw1ao")
+stretch_mode = 5
+
+[node name="BarFill" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Yield/PlantStatBar" unique_id=419141160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_xf64j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ShelfLife" type="HBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats" unique_id=1103522255]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/ShelfLife" unique_id=783957835]
+layout_mode = 2
+texture = SubResource("AtlasTexture_uy601")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PlantStatBar" type="Control" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/ShelfLife" unique_id=1945080411]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+
+[node name="BarBackground" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/ShelfLife/PlantStatBar" unique_id=1904539357]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_fw1ao")
+stretch_mode = 5
+
+[node name="BarFill" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/ShelfLife/PlantStatBar" unique_id=835361882]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_xf64j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Resiliance" type="HBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats" unique_id=1894198052]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Resiliance" unique_id=1078205090]
+layout_mode = 2
+texture = SubResource("AtlasTexture_lfbcy")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PlantStatBar" type="Control" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Resiliance" unique_id=787782682]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+
+[node name="BarBackground" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Resiliance/PlantStatBar" unique_id=33932713]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_fw1ao")
+stretch_mode = 5
+
+[node name="BarFill" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/Stats/Resiliance/PlantStatBar" unique_id=926838315]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_xf64j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Seperator" type="ColorRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove" unique_id=1926251104]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 86.0
+offset_right = 305.0
+offset_bottom = 259.0
+color = Color(0.6789, 0.73, 0.7027467, 1)
+
+[node name="RightStats" type="VBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove" unique_id=754072382]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 92.0
+offset_right = 389.0
+offset_bottom = 164.0
+
+[node name="TimeToMaturity" type="HBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/RightStats" unique_id=1227847323]
+layout_mode = 2
+
+[node name="MaturityIcon" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/RightStats/TimeToMaturity" unique_id=517436079]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = SubResource("AtlasTexture_wkmhq")
+stretch_mode = 5
+
+[node name="TimeToMaturity" type="Label" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/RightStats/TimeToMaturity" unique_id=510287360]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "85"
+vertical_alignment = 1
+
+[node name="SellPrice" type="HBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/RightStats" unique_id=2070509966]
+layout_mode = 2
+
+[node name="SellIcon" type="TextureRect" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/RightStats/SellPrice" unique_id=1371418026]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = SubResource("AtlasTexture_78dfu")
+stretch_mode = 5
+
+[node name="SellPrice" type="Label" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/RightStats/SellPrice" unique_id=805796117]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "120"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ActionButtons" type="HBoxContainer" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove" unique_id=772580876]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 93.0
+offset_top = 58.5
+offset_right = 17.0
+offset_bottom = 122.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CancelButton" type="TextureButton" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons" unique_id=91363387]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = SubResource("AtlasTexture_kwdmy")
+texture_pressed = SubResource("AtlasTexture_0sfgv")
+texture_hover = SubResource("AtlasTexture_v0q2u")
+texture_focused = SubResource("AtlasTexture_v0q2u")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons/CancelButton" unique_id=1544804091]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.14497936, 0.059468262, 1.8049032e-08, 1)
+text = "Cancel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlantButton" type="TextureButton" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons" unique_id=194996468]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = SubResource("AtlasTexture_48oqh")
+texture_pressed = SubResource("AtlasTexture_6skxy")
+texture_hover = SubResource("AtlasTexture_mlqd4")
+texture_focused = SubResource("AtlasTexture_mlqd4")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons/PlantButton" unique_id=917194096]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.14497936, 0.059468262, 1.8049032e-08, 1)
+text = "Plant"
+horizontal_alignment = 1
+vertical_alignment = 1

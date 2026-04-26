@@ -1,6 +1,8 @@
 [gd_resource type="Resource" script_class="CropVarietyResource" format=3 uid="uid://d1sdcvq3a5vnt"]
 
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_0pmj7"]
+[ext_resource type="Texture2D" uid="uid://bw0r5kfs81p03" path="res://assets/farm/crops/ground/pepper_red/redpepper_crop_lifecycle.png" id="1_rxs5d"]
+[ext_resource type="Texture2D" uid="uid://c8b3dr25xs1jf" path="res://assets/farm/crops/ground/pepper_red/redpepper_seedpacket_icon.png" id="1_tjwd0"]
 
 [resource]
 script = ExtResource("1_0pmj7")
@@ -16,4 +18,6 @@ Yield = 100
 ShelfLife = 40
 Resilience = 40
 GrowthSpeed = 40
+SeedPacketTexture = ExtResource("1_tjwd0")
+LifeCycleTexture = ExtResource("1_rxs5d")
 metadata/_custom_type_script = "uid://uh0bfixhgfay"
