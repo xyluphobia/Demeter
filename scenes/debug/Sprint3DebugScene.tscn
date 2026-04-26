@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ch66v5naworwe" path="res://scenes/farm/FarmTileMap.tscn" id="1_uqy40"]
 [ext_resource type="PackedScene" uid="uid://bamevyqgg57nb" path="res://scenes/player/PlayerCamera.tscn" id="2_o1bo5"]
 [ext_resource type="PackedScene" uid="uid://b108xlxobfj7r" path="res://scenes/ui/JournalUI.tscn" id="3_o1bo5"]
+[ext_resource type="PackedScene" uid="uid://cwol0gp4o1ax0" path="res://scenes/debug/Sprint1DebugScene.tscn" id="4_7lw4q"]
 
 [node name="Sprint3DebugScene" type="Node2D" unique_id=2009820036]
 
@@ -12,3 +13,5 @@
 
 [node name="JournalUI" parent="." unique_id=1485079148 instance=ExtResource("3_o1bo5")]
 visible = false
+
+[node name="Sprint1Debug" parent="." unique_id=1018467129 instance=ExtResource("4_7lw4q")]

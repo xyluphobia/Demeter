@@ -50,9 +50,8 @@ public partial class FarmTileMap : Node2D
     sprite.Position = worldPos;
     AddChild(sprite);
 
-    FarmManager.I.SetGridPlot(new FarmBedPlot(position) {
+    FarmManager.I.SetGridPlot(new FarmBedPlot(position, crop) {
       CropSprite = sprite,
-      Crop = crop,
     });
   }
 

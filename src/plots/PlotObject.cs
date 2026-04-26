@@ -9,4 +9,6 @@ public abstract class PlotObject
   {
     GridPosition = gridPosition;
   }
+
+  public abstract void Cleanup();
 }
