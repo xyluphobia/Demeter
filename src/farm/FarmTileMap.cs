@@ -17,6 +17,8 @@ public partial class FarmTileMap : Node2D
 
     WorkPlotMenu = GetNode<WorkPlotMenu>("CanvasLayer/WorkPlotMenu");
 
+    FarmManager.I.RegisterGroundLayer(groundLayer);
+
     InputManager.I.Tapped += OnTapped;
     FarmManager.I.PlantCrop += OnPlantCrop;
 	}
@@ -31,28 +33,16 @@ public partial class FarmTileMap : Node2D
       return;
     }
 
-    PlotObject? plot = FarmManager.I.GetGridPlot(tappedGridPos);
-    if (plot == null) {
-      WorkPlotMenu.Visible = true;
-      WorkPlotMenu.activeGridPos = tappedGridPos;
-    }
+    FarmManager.I.EmitSignal(FarmManager.SignalName.PlotTapped, tappedGridPos);
+    WorkPlotMenu.Visible = true;
   }
 
 
   private void OnPlantCrop(Vector2I position, CropVarietyResource crop) {
-    Vector2 worldPos = groundLayer.MapToLocal(position);
-
-    Sprite2D sprite = new Sprite2D();
-    sprite.Texture = crop.LifeCycleTexture;
-
-    sprite.RegionEnabled = true;
-    sprite.RegionRect = new Rect2(0, 0, 16, crop.LifeCycleTexture.GetHeight());
-    sprite.Position = worldPos;
-    AddChild(sprite);
-
-    FarmManager.I.SetGridPlot(new FarmBedPlot(position, crop) {
-      CropSprite = sprite,
-    });
+    FarmBedPlot plot = FarmManager.I.GetGridPlot(position) as FarmBedPlot; 
+    if (plot.Crop != null)
+      return;
+    plot.Crop = crop;
   }
 
   private void WaterPlot(Vector2I position) {

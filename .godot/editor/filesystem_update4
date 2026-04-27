@@ -24,3 +24,6 @@ res://src/debug/Sprint1Debug.cs
 res://src/resources/RecipeInputResource.cs
 res://scenes/farm/FarmTileMap.tscn
 res://scenes/debug/Sprint1DebugScene.tscn
+res://src/singletons/PlayerInventory.cs
+res://scenes/ui/WorkPlotMenu.tscn
+res://src/singletons/UIManager.cs

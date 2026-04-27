@@ -19,6 +19,8 @@ config/features=PackedStringArray("4.6", "C#", "Mobile")
 GameCalendar="*uid://5qn7xoa0heh2"
 InputManager="*uid://b1fffg6ivlnwu"
 FarmManager="*uid://c51ggjjk3ci7c"
+PlayerInventory="*uid://bhaa71n5yly1u"
+UiManager="*uid://dq28r0lyqmgsx"
 
 [display]
 

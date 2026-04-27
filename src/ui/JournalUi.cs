@@ -19,9 +19,9 @@ public partial class JournalUi : CanvasLayer
   private const int SeedsPerPage = 9;
 
 	public override void _Ready() {
-    FarmManager.I.PlantingAttempting += (Vector2I position) => {
+    UIManager.I.OpenSeedSelection += () => {
       this.Visible = true;
-      _activeGridPos = position;
+      _activeGridPos = FarmManager.I.ActiveGridPos;
     };
 
     _seedGridLeft = GetNode<SeedGrid>("BookBaseContainer/LeftPage/MarginContainer/SeedGridLeft");

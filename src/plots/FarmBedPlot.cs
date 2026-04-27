@@ -3,7 +3,15 @@ using System;
  
 public class FarmBedPlot : PlotObject 
 {
-  public CropVarietyResource Crop { get; }
+  private CropVarietyResource? _crop;
+  public CropVarietyResource? Crop { 
+    get => _crop; 
+    set {
+      _crop = value;
+      if (value != null)
+        CropPlantedSetup();
+    }
+  }
   public Sprite2D CropSprite  { get; set; }
 
   public bool HasBeenHarvested { get; private set; } = false;
@@ -11,8 +19,8 @@ public class FarmBedPlot : PlotObject
 
   // 'Effective' versions set in constructor used to provide some variance
   // On when each crop grows 
-  private readonly int _effectiveMaturityDays;
-  private readonly int _effectiveReharvestDays;
+  private int _effectiveMaturityDays;
+  private int _effectiveReharvestDays;
   private SceneTreeTimer _growthTimer;
   private Action _growthAction;
 
@@ -24,19 +32,28 @@ public class FarmBedPlot : PlotObject
         return _effectiveReharvestDays - DaysSincePlanted;
     }
   }
-
   public int GrowthStage { get; private set; } = 1;
 
-  public FarmBedPlot(Vector2I GridPosition, CropVarietyResource crop) : base(GridPosition)
+  private readonly Vector2 _worldPos;
+
+  public FarmBedPlot(Vector2I GridPosition) : base(GridPosition)
   {
-    Crop = crop;
-
-    float variance = (float)GD.RandRange(-0.15, 0.15);
-    _effectiveMaturityDays   = Mathf.RoundToInt(crop.MaturityDays * (1f + variance));
-    _effectiveReharvestDays  = Mathf.RoundToInt(crop.ReharvestCycleDays * (1f + variance));
-
+    _worldPos = FarmManager.I.GridToWorld(GridPosition);
 
     GameCalendar.I.DayPassed += OnDayPassed;
+  }
+
+  private void CropPlantedSetup() {
+    float variance = (float)GD.RandRange(-0.15, 0.15);
+    _effectiveMaturityDays   = Mathf.RoundToInt(_crop.MaturityDays * (1f + variance));
+    _effectiveReharvestDays  = Mathf.RoundToInt(_crop.ReharvestCycleDays * (1f + variance));
+
+    CropSprite = new Sprite2D();
+    CropSprite.Texture = _crop.LifeCycleTexture;
+    CropSprite.RegionEnabled = true;
+    CropSprite.RegionRect = new Rect2(0, 0, 16, _crop.LifeCycleTexture.GetHeight());
+    CropSprite.Position = _worldPos;
+    FarmManager.I.CropSpriteContainer.AddChild(CropSprite);
   }
 
   private void OnDayPassed(int day) {
@@ -95,11 +112,25 @@ public class FarmBedPlot : PlotObject
     CropSprite.RegionRect = new Rect2(((GrowthStage - 1) * 16), 0, 16, Crop.LifeCycleTexture.GetHeight());
   }
 
+  public void ClearCrop() {
+    if (CropSprite != null)
+      CropSprite.Texture = null;
+
+    _growthTimer = null;
+    _crop = null;
+    DaysSincePlanted = 0;
+    GrowthStage = 1;
+    HasBeenHarvested = false;
+    _growthAction = null;
+  }
+
   public override void Cleanup() {
     GameCalendar.I.DayPassed -= OnDayPassed;
     if (_growthTimer != null) {
       _growthTimer.Timeout -= _growthAction;
       _growthTimer = null;
     }
+    ClearCrop();
+    CropSprite.QueueFree();
   }
 }
