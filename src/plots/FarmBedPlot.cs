@@ -102,6 +102,16 @@ public class FarmBedPlot : PlotObject
   }
 
   public void Harvest() {
+    if (_crop == null || GrowthStage != 5)
+      return;
+
+    PlayerInventory.I.AddItem(Crop.Produce);
+
+    if (_crop.HarvestType == HarvestTypes.SINGLE) {
+      ClearCrop();
+      return;
+    }
+
     HasBeenHarvested = true;
     DaysSincePlanted = 0;
     GrowthStage = 3;
@@ -109,7 +119,7 @@ public class FarmBedPlot : PlotObject
   }
 
   private void UpdateSprite() {
-    CropSprite.RegionRect = new Rect2(((GrowthStage - 1) * 16), 0, 16, Crop.LifeCycleTexture.GetHeight());
+    CropSprite.RegionRect = new Rect2(((GrowthStage - 1) * 16), 0, 16, _crop.LifeCycleTexture.GetHeight());
   }
 
   public void ClearCrop() {

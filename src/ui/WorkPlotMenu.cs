@@ -62,6 +62,8 @@ public partial class WorkPlotMenu : Control
   private void OnWater() {
   }
   private void OnHarvest() {
+    (FarmManager.I.GetGridPlot(_activeGridPos) as FarmBedPlot)?.Harvest();
+    ResetMenu();
   }
   private void OnPull() {
     (FarmManager.I.GetGridPlot(_activeGridPos) as FarmBedPlot)?.ClearCrop();
