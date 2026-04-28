@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://tau5fhbrbiwq"]
+
+[ext_resource type="Texture2D" uid="uid://bg7nydvbliq3n" path="res://assets/ui/ui_buttons/buttons.png" id="1_j1lxc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48oqh"]
+atlas = ExtResource("1_j1lxc")
+region = Rect2(74, 698, 20, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6skxy"]
+atlas = ExtResource("1_j1lxc")
+region = Rect2(74, 794, 20, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlqd4"]
+atlas = ExtResource("1_j1lxc")
+region = Rect2(74, 746, 20, 14)
+
+[node name="ConfirmButton" type="TextureButton" unique_id=610168748]
+size_flags_horizontal = 3
+texture_normal = SubResource("AtlasTexture_48oqh")
+texture_pressed = SubResource("AtlasTexture_6skxy")
+texture_hover = SubResource("AtlasTexture_mlqd4")
+texture_focused = SubResource("AtlasTexture_mlqd4")
+stretch_mode = 5

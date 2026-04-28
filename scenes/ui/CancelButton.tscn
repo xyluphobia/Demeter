@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c0gneetj6umw6"]
+
+[ext_resource type="Texture2D" uid="uid://bg7nydvbliq3n" path="res://assets/ui/ui_buttons/buttons.png" id="1_m8rgc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwdmy"]
+atlas = ExtResource("1_m8rgc")
+region = Rect2(74, 914, 20, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sfgv"]
+atlas = ExtResource("1_m8rgc")
+region = Rect2(74, 1010, 20, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0q2u"]
+atlas = ExtResource("1_m8rgc")
+region = Rect2(74, 962, 20, 14)
+
+[node name="CancelButton" type="TextureButton" unique_id=1853507412]
+size_flags_horizontal = 3
+texture_normal = SubResource("AtlasTexture_kwdmy")
+texture_pressed = SubResource("AtlasTexture_0sfgv")
+texture_hover = SubResource("AtlasTexture_v0q2u")
+texture_focused = SubResource("AtlasTexture_v0q2u")
+stretch_mode = 5

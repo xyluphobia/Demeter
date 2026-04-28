@@ -8,9 +8,12 @@ public partial class WorkPlotMenu : Control
   private Control farmBedButtons;
   private Control emptyPlotButtons;
 
+  private Control confirmPullDialogue;
+
   public override void _Ready()
   {
     farmBedButtons = GetNode<HBoxContainer>("FarmBedOptions");
+    confirmPullDialogue = GetNode<Control>("ConfirmDialogue");
     emptyPlotButtons = GetNode<Control>("EmptyBedOptions");
 
     GetNode<Button>("Close").Pressed += ResetMenu;
@@ -20,6 +23,9 @@ public partial class WorkPlotMenu : Control
     farmBedButtons.GetNode<Button>("Harvest").Pressed += OnHarvest;
     farmBedButtons.GetNode<Button>("Pull").Pressed += OnPull;
 
+    confirmPullDialogue.GetNode<TextureButton>("Buttons/CancelButton").Pressed += OnPullCancel;
+    confirmPullDialogue.GetNode<TextureButton>("Buttons/ConfirmButton").Pressed += OnPullConfirm;
+
     emptyPlotButtons.GetNode<Button>("Till").Pressed += OnTill;
 
     FarmManager.I.PlotTapped += OnPlotTapped;
@@ -28,6 +34,7 @@ public partial class WorkPlotMenu : Control
   private void ResetMenu() {
     _activeGridPos = Vector2I.Zero;
 
+    confirmPullDialogue.Visible = false;
     farmBedButtons.Visible = false;
     emptyPlotButtons.Visible = false;
     this.Visible = false;
@@ -66,7 +73,15 @@ public partial class WorkPlotMenu : Control
     ResetMenu();
   }
   private void OnPull() {
+    if ((FarmManager.I.GetGridPlot(_activeGridPos) as FarmBedPlot)?.Crop != null)
+      confirmPullDialogue.Visible = true;
+  }
+  
+  private void OnPullConfirm() {
     (FarmManager.I.GetGridPlot(_activeGridPos) as FarmBedPlot)?.ClearCrop();
+    ResetMenu();
+  }
+  private void OnPullCancel() {
     ResetMenu();
   }
 

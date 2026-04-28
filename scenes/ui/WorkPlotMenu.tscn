@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dqvubujshe4w7"]
 
 [ext_resource type="Script" uid="uid://ckni03tyht4st" path="res://src/ui/WorkPlotMenu.cs" id="1_qata1"]
+[ext_resource type="PackedScene" uid="uid://b154c6g3c23hc" path="res://scenes/ui/UI_Background.tscn" id="2_pnee1"]
+[ext_resource type="PackedScene" uid="uid://bsg0d30m2dc7c" path="res://scenes/ui/ConfirmDialogue.tscn" id="3_rlxc4"]
 
 [node name="WorkPlotMenu" type="Control" unique_id=690038517]
 layout_mode = 3
@@ -10,6 +12,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qata1")
+
+[node name="UI_Background" parent="." unique_id=1515881106 instance=ExtResource("2_pnee1")]
+layout_mode = 1
 
 [node name="GridCoord" type="Label" parent="." unique_id=738503141]
 layout_mode = 1
@@ -87,3 +92,7 @@ offset_right = -618.0
 offset_bottom = 292.0
 grow_horizontal = 0
 text = "Close"
+
+[node name="ConfirmDialogue" parent="." unique_id=336225987 instance=ExtResource("3_rlxc4")]
+visible = false
+layout_mode = 1

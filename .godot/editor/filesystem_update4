@@ -23,3 +23,11 @@ res://src/singletons/GameCalendar.cs
 res://src/resources/RecipeInputResource.cs
 res://src/resources/InventoryItemResource.cs
 res://src/resources/RecipeResource.cs
+res://scenes/ui/WorkPlotMenu.tscn
+res://scenes/ui/JournalUI.tscn
+res://scenes/ui/UI_Background.tscn
+res://scenes/ui/ConfirmDialoug.tscn
+res://scenes/ui/ConfirmButton.tscn
+res://scenes/ui/CancelButton.tscn
+res://scenes/ui/ConfirmDialogue.tscn
+res://scenes/farm/FarmTileMap.tscn

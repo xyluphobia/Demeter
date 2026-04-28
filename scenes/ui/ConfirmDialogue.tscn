@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://bsg0d30m2dc7c"]
+
+[ext_resource type="Texture2D" uid="uid://da8tf35horhye" path="res://assets/ui/ui_windows/windows.png" id="1_5661a"]
+[ext_resource type="Texture2D" uid="uid://c37xvmkcvd85w" path="res://assets/ui/ui_windows/windows_decorations.png" id="2_6j41g"]
+[ext_resource type="PackedScene" uid="uid://c0gneetj6umw6" path="res://scenes/ui/CancelButton.tscn" id="2_rxc8n"]
+[ext_resource type="PackedScene" uid="uid://tau5fhbrbiwq" path="res://scenes/ui/ConfirmButton.tscn" id="3_6j41g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iaslj"]
+atlas = ExtResource("1_5661a")
+region = Rect2(272, 288, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlomw"]
+atlas = ExtResource("2_6j41g")
+region = Rect2(32, 60, 48, 23)
+
+[node name="ConfirmDialogue" type="Control" unique_id=336225987]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="Backdrop" type="NinePatchRect" parent="." unique_id=1996173812]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -15.25
+offset_right = 24.0
+offset_bottom = 15.25
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(8, 8)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_iaslj")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Decoration" type="NinePatchRect" parent="Backdrop" unique_id=1548142810]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_hlomw")
+patch_margin_left = 20
+patch_margin_top = 10
+patch_margin_right = 20
+patch_margin_bottom = 10
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=865340399]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.5
+offset_top = -73.0
+offset_right = 137.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "Are you sure?"
+
+[node name="Buttons" type="HBoxContainer" parent="." unique_id=186498163]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = 18.0
+offset_right = 184.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CancelButton" parent="Buttons" unique_id=1853507412 instance=ExtResource("2_rxc8n")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Buttons/CancelButton" unique_id=967071382]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -14.5
+offset_right = 20.0
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "No"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConfirmButton" parent="Buttons" unique_id=610168748 instance=ExtResource("3_6j41g")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Buttons/ConfirmButton" unique_id=871721573]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -14.5
+offset_right = 20.0
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Yes"
+horizontal_alignment = 1
+vertical_alignment = 1

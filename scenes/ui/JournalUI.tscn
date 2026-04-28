@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://5chnacof6bno" path="res://src/ui/SeedGrid.cs" id="3_8h443"]
 [ext_resource type="Texture2D" uid="uid://dmr6q7j8fswy8" path="res://assets/ui/ui_books/SeedJournal.png" id="3_bch43"]
 [ext_resource type="Texture2D" uid="uid://jwuvffvb86cs" path="res://assets/ui/icons/Seasons.png" id="3_fa0tw"]
+[ext_resource type="PackedScene" uid="uid://b154c6g3c23hc" path="res://scenes/ui/UI_Background.tscn" id="3_mxo1k"]
 [ext_resource type="PackedScene" uid="uid://dih35et2nlcvc" path="res://scenes/ui/SeedButton.tscn" id="3_rx0bv"]
 [ext_resource type="Texture2D" uid="uid://cxq43vvok6khq" path="res://assets/ui/ui_grids/grid_icons.png" id="8_ush5w"]
 [ext_resource type="Texture2D" uid="uid://bqoydr000lulo" path="res://assets/ui/ui_container_panels/container_panels.png" id="9_5suib"]
@@ -15,9 +16,10 @@
 [ext_resource type="Script" uid="uid://bxve30lyqa6br" path="res://src/ui/PlantStatBar.cs" id="12_v6ffx"]
 [ext_resource type="Texture2D" uid="uid://c478ydqx4mbbs" path="res://assets/ui/icons/16x16_game_icons.png" id="13_fw1ao"]
 [ext_resource type="Texture2D" uid="uid://rori0ej743cn" path="res://assets/ui/text/OneOrMany.png" id="13_mlqd4"]
-[ext_resource type="Texture2D" uid="uid://bg7nydvbliq3n" path="res://assets/ui/ui_buttons/buttons.png" id="14_tv62c"]
 [ext_resource type="Texture2D" uid="uid://8codmskaxxf5" path="res://assets/ui/ui_banners/banners_vertical.png" id="16_xf64j"]
 [ext_resource type="Texture2D" uid="uid://cfttae5vm63e0" path="res://assets/ui/icons/card_value_icons.png" id="17_48oqh"]
+[ext_resource type="PackedScene" uid="uid://c0gneetj6umw6" path="res://scenes/ui/CancelButton.tscn" id="19_s782h"]
+[ext_resource type="PackedScene" uid="uid://tau5fhbrbiwq" path="res://scenes/ui/ConfirmButton.tscn" id="20_uy601"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stqb7"]
 texture = ExtResource("2_stqb7")
@@ -137,41 +139,11 @@ region = Rect2(88, 8, 7, 8)
 atlas = ExtResource("2_fa0tw")
 region = Rect2(80, 8, 7, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kwdmy"]
-atlas = ExtResource("14_tv62c")
-region = Rect2(74, 914, 20, 14)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0sfgv"]
-atlas = ExtResource("14_tv62c")
-region = Rect2(74, 1010, 20, 14)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v0q2u"]
-atlas = ExtResource("14_tv62c")
-region = Rect2(74, 962, 20, 14)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_48oqh"]
-atlas = ExtResource("14_tv62c")
-region = Rect2(74, 698, 20, 14)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6skxy"]
-atlas = ExtResource("14_tv62c")
-region = Rect2(74, 794, 20, 14)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mlqd4"]
-atlas = ExtResource("14_tv62c")
-region = Rect2(74, 746, 20, 14)
-
 [node name="JournalUI" type="CanvasLayer" unique_id=1485079148]
 script = ExtResource("1_h84i5")
 CropRegistry = ExtResource("2_8h443")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1254034410]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.5176471)
+[node name="UI_Background" parent="." unique_id=1515881106 instance=ExtResource("3_mxo1k")]
 
 [node name="BookBaseContainer" type="HBoxContainer" parent="." unique_id=565088989]
 anchors_preset = 8
@@ -847,16 +819,10 @@ offset_bottom = 122.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CancelButton" type="TextureButton" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons" unique_id=91363387]
+[node name="CancelButton" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons" unique_id=1853507412 instance=ExtResource("19_s782h")]
 layout_mode = 2
-size_flags_horizontal = 3
-texture_normal = SubResource("AtlasTexture_kwdmy")
-texture_pressed = SubResource("AtlasTexture_0sfgv")
-texture_hover = SubResource("AtlasTexture_v0q2u")
-texture_focused = SubResource("AtlasTexture_v0q2u")
-stretch_mode = 5
 
-[node name="Label" type="Label" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons/CancelButton" unique_id=1544804091]
+[node name="Label" type="Label" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons/CancelButton" unique_id=1553454642]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -870,16 +836,10 @@ text = "Cancel"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PlantButton" type="TextureButton" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons" unique_id=194996468]
+[node name="PlantButton" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons" unique_id=610168748 instance=ExtResource("20_uy601")]
 layout_mode = 2
-size_flags_horizontal = 3
-texture_normal = SubResource("AtlasTexture_48oqh")
-texture_pressed = SubResource("AtlasTexture_6skxy")
-texture_hover = SubResource("AtlasTexture_mlqd4")
-texture_focused = SubResource("AtlasTexture_mlqd4")
-stretch_mode = 5
 
-[node name="Label" type="Label" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons/PlantButton" unique_id=917194096]
+[node name="PlantLabel" type="Label" parent="BookBaseContainer/RightPage/SeedDetails/SeedDetailsFreeMove/ActionButtons/PlantButton" unique_id=1967227424]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Demeter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+594d66f1bd4215498035cf85b1bb4cfedd7de76d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5c9df3d1ec74e841431a256168a49c25178e551")]
 [assembly: System.Reflection.AssemblyProductAttribute("Demeter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Demeter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
