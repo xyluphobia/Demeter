@@ -10,10 +10,13 @@ public partial class Sprint1Debug : Node
 
 	public override void _Ready()
 	{
-    Button button = GetNode<Button>("Canvas/ProgressDay");
-    button.Pressed += ProgressDay;
+    Button progressDayButton = GetNode<Button>("Canvas/Skip/ProgressDay");
+    Button progressSeasonButton = GetNode<Button>("Canvas/Skip/ProgressSeason");
+    progressDayButton.Pressed += ProgressDay;
+    progressSeasonButton.Pressed += ProgressSeason;
 
     GameCalendar.I.DayPassed += OnDayPassed;
+    GameCalendar.I.SeasonChanged += OnDayPassed;
     InputManager.I.Tapped += OnTapped;
     InputManager.I.Dragging += OnDragging;
 
@@ -31,16 +34,18 @@ public partial class Sprint1Debug : Node
   private void ProgressDay() {
     GameCalendar.I.AdvanceDay();
   }
+  private void ProgressSeason() {
+    GameCalendar.I.AdvanceSeason();
+  }
 
   private void OnDayPassed(int day) {
-    dayLabel.Text = GameCalendar.I.currentDay.ToString();
+    dayLabel.Text = GameCalendar.I.currentDayInSeason.ToString();
     seasonLabel.Text = GameCalendar.I.currentSeason.ToString();
   }
 
   private void OnTapped(Vector2 position) {
     tapPosLabel.Text = position.ToString();
   }
-  
   private void OnDragging(Vector2 delta) {
     draggingLabel.Text = (delta != Vector2.Zero).ToString();
   }

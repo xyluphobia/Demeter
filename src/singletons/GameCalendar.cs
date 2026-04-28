@@ -11,7 +11,7 @@ public partial class GameCalendar : Node
 
   private const int DaysPerSeason = 25;
   public int currentDay { get; private set; } = 1;
-  public int currentDayInSeason => currentDay % DaysPerSeason;
+  public int currentDayInSeason => ((currentDay - 1) % DaysPerSeason) + 1;
   public Seasons currentSeason { get; private set; } = Seasons.SPRING;
 
   public override void _Ready()
@@ -23,12 +23,17 @@ public partial class GameCalendar : Node
   public void AdvanceDay() {
     currentDay ++;
 
-    if (currentDayInSeason > DaysPerSeason) {
+    if (((currentDay - 1) % DaysPerSeason) + 1 == 1) {
       currentSeason = (Seasons)(((int)currentSeason + 1) % 4);
       EmitSignal(SignalName.SeasonChanged, (int)currentSeason);
     }
 
     EmitSignal(SignalName.DayPassed, currentDay);
+  }
+
+  public void AdvanceSeason() {
+    currentSeason = (Seasons)(((int)currentSeason + 1) % 4);
+    EmitSignal(SignalName.SeasonChanged, (int)currentSeason);
   }
 
 }

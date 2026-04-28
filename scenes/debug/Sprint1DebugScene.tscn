@@ -51,12 +51,20 @@ text = "Dragging: "
 [node name="Result" type="Label" parent="Canvas/Outputs/Dragging" unique_id=1339987808]
 layout_mode = 2
 
-[node name="ProgressDay" type="Button" parent="Canvas" unique_id=138850829]
+[node name="Skip" type="HBoxContainer" parent="Canvas" unique_id=1775668412]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -220.0
-offset_bottom = 94.0
+offset_left = -521.0
+offset_bottom = 75.0
 grow_horizontal = 0
+
+[node name="ProgressSeason" type="Button" parent="Canvas/Skip" unique_id=766693908]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Next Season"
+
+[node name="ProgressDay" type="Button" parent="Canvas/Skip" unique_id=138850829]
+layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "Next Day"
