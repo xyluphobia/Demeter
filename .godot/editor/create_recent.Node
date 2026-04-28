@@ -1,5 +1,6 @@
-NinePatchRect
+CanvasLayer
 Label
+NinePatchRect
 HBoxContainer
 Button
 TextureRect

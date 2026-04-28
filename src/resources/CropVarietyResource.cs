@@ -17,7 +17,7 @@ public partial class CropVarietyResource : Resource
   [Export] public int ReharvestCycleDays { get; set; }
 
   [Export] public float BaseSellPrice { get; set; }
-  [Export] public InventoryItemResource Produce { get; set; }
+  [Export] public CollectibleCropProduce Produce { get; set; }
 
   [ExportCategory("Stats")]
   [Export(PropertyHint.Range, "1,100")] public int Flavour { get; set; }

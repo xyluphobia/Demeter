@@ -31,3 +31,12 @@ res://scenes/ui/ConfirmButton.tscn
 res://scenes/ui/CancelButton.tscn
 res://scenes/ui/ConfirmDialogue.tscn
 res://scenes/farm/FarmTileMap.tscn
+res://src/debug/Sprint3Debug.cs
+res://src/resources/InventoryStackResource.cs
+res://src/resources/CollectibleItemResource.cs
+res://src/resources/CollectibleCropProduce.cs
+res://data/crops/Radish/Cherry Belle.tres
+res://src/resources/inventory/CollectibleItemResource.cs
+res://src/resources/inventory/CollectibleCropProduce.cs
+res://src/resources/inventory/InventoryStackResource.cs
+res://data/crops/Radish/Cherry BelleProduce.tres

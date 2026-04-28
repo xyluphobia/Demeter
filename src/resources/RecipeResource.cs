@@ -9,7 +9,7 @@ public partial class RecipeResource : Resource
   [Export] public int ProcessingTimeDays { get; set; }
 
   [Export] public RecipeInputResource[] Input { get; set; }
-  [Export] public InventoryItemResource Output { get; set; }
+  [Export] public CollectibleItemResource Output { get; set; }
 }
 
 

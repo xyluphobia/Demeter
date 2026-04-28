@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CollectibleCropProduce" format=3 uid="uid://n5xq65nauc6e"]
+
+[ext_resource type="Script" uid="uid://djcba67e4yit1" path="res://src/resources/inventory/CollectibleCropProduce.cs" id="1_3q2nj"]
+
+[resource]
+script = ExtResource("1_3q2nj")
+Name = "Cherry Belle"
+ShelfLifeDays = 10
+metadata/_custom_type_script = "uid://djcba67e4yit1"

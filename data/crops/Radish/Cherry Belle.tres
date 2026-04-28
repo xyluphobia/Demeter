@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://uh0bfixhgfay" path="res://src/resources/CropVarietyResource.cs" id="1_bhetv"]
 [ext_resource type="Texture2D" uid="uid://ckrftrwtk7ysl" path="res://assets/farm/crops/ground/radish/radish_crop_lifecycle.png" id="1_khnam"]
 [ext_resource type="Texture2D" uid="uid://bdrd8wmmwi11s" path="res://assets/farm/crops/ground/radish/radish_seedpacket_icon.png" id="1_samlj"]
+[ext_resource type="Resource" uid="uid://n5xq65nauc6e" path="res://data/crops/Radish/Cherry BelleProduce.tres" id="2_ervpv"]
 
 [resource]
 script = ExtResource("1_bhetv")
 Name = "Cherry Belle"
 Plant = 11
 MaturityDays = 25
+Produce = ExtResource("2_ervpv")
 Flavour = 60
 Yield = 80
 ShelfLife = 60

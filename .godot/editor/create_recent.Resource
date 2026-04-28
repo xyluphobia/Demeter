@@ -1,3 +1,4 @@
+CollectibleCropProduce
 CropRegistryResource
 Resource
 CropVarietyResource
