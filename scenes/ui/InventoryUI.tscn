@@ -191,3 +191,63 @@ layout_mode = 2
 texture = SubResource("AtlasTexture_dwver")
 expand_mode = 3
 stretch_mode = 5
+
+[node name="GridMargin" type="MarginContainer" parent="InventoryBackground" unique_id=933249282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 110
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="GridScroll" type="ScrollContainer" parent="InventoryBackground/GridMargin" unique_id=1315044341]
+layout_mode = 2
+
+[node name="InventoryGrid" type="GridContainer" parent="InventoryBackground/GridMargin/GridScroll" unique_id=1544258537]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 5
+
+[node name="ItemPanel" type="PanelContainer" parent="InventoryBackground/GridMargin/GridScroll/InventoryGrid" unique_id=1736719829]
+custom_minimum_size = Vector2(160, 120)
+layout_mode = 2
+
+[node name="ItemMargin" type="MarginContainer" parent="InventoryBackground/GridMargin/GridScroll/InventoryGrid/ItemPanel" unique_id=1867219365]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ItemDetailVBox" type="VBoxContainer" parent="InventoryBackground/GridMargin/GridScroll/InventoryGrid/ItemPanel/ItemMargin" unique_id=1132810451]
+layout_mode = 2
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryBackground/GridMargin/GridScroll/InventoryGrid/ItemPanel/ItemMargin/ItemDetailVBox" unique_id=3563526]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="ItemNameLabel" type="Label" parent="InventoryBackground/GridMargin/GridScroll/InventoryGrid/ItemPanel/ItemMargin/ItemDetailVBox" unique_id=1281594514]
+layout_mode = 2
+text = "Beatroots"
+
+[node name="QuantityLabel" type="Label" parent="InventoryBackground/GridMargin/GridScroll/InventoryGrid/ItemPanel/ItemMargin/ItemDetailVBox" unique_id=1620706901]
+layout_mode = 2
+text = "x20"
+
+[node name="ExpiryHBox" type="HBoxContainer" parent="InventoryBackground/GridMargin/GridScroll/InventoryGrid/ItemPanel" unique_id=679133674]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="ExpiringWarningIcon" type="ColorRect" parent="InventoryBackground/GridMargin/GridScroll/InventoryGrid/ItemPanel/ExpiryHBox" unique_id=245780101]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="RemainingTimeLabel" type="Label" parent="InventoryBackground/GridMargin/GridScroll/InventoryGrid/ItemPanel/ExpiryHBox" unique_id=530583954]
+layout_mode = 2
+text = "2d"
