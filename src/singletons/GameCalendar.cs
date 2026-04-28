@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public partial class GameCalendar : Node
 {
@@ -10,8 +9,8 @@ public partial class GameCalendar : Node
 
 
   private const int DaysPerSeason = 25;
-  public int currentDay { get; private set; } = 1;
-  public int currentDayInSeason => ((currentDay - 1) % DaysPerSeason) + 1;
+  public int totalDaysPassed { get; private set; } = 1;
+  public int seasonDaysPassed => ((totalDaysPassed - 1) % DaysPerSeason) + 1;
   public Seasons currentSeason { get; private set; } = Seasons.SPRING;
 
   public override void _Ready()
@@ -21,14 +20,14 @@ public partial class GameCalendar : Node
 
 
   public void AdvanceDay() {
-    currentDay ++;
+    totalDaysPassed ++;
 
-    if (((currentDay - 1) % DaysPerSeason) + 1 == 1) {
+    if (((totalDaysPassed - 1) % DaysPerSeason) + 1 == 1) {
       currentSeason = (Seasons)(((int)currentSeason + 1) % 4);
       EmitSignal(SignalName.SeasonChanged, (int)currentSeason);
     }
 
-    EmitSignal(SignalName.DayPassed, currentDay);
+    EmitSignal(SignalName.DayPassed, totalDaysPassed);
   }
 
   public void AdvanceSeason() {

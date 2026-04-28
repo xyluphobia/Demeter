@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://dve7d1cboiil4"]
+
+[ext_resource type="Texture2D" uid="uid://rivs7fvo24k5" path="res://assets/ui/ui_windows/InventoryWindow.png" id="1_p0ay3"]
+[ext_resource type="Texture2D" uid="uid://dc7gl3a4mqttb" path="res://assets/ui/ui_banners/banners_horizontal.png" id="2_jywan"]
+[ext_resource type="Texture2D" uid="uid://ewwt0ckdls2" path="res://assets/ui/ui_general_interface/checkboxes.png" id="3_ufdhg"]
+[ext_resource type="Texture2D" uid="uid://dtltkbydfgig4" path="res://assets/ui/ui_general_interface/top_bar_items.png" id="4_1r87s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r87s"]
+atlas = ExtResource("2_jywan")
+region = Rect2(589, 628, 3, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufdhg"]
+atlas = ExtResource("2_jywan")
+region = Rect2(608, 628, 16, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbxri"]
+atlas = ExtResource("3_ufdhg")
+region = Rect2(117, 37, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvuwj"]
+atlas = ExtResource("4_1r87s")
+region = Rect2(245, 68, 7, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jywan"]
+atlas = ExtResource("2_jywan")
+region = Rect2(640, 628, 3, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgv8v"]
+atlas = ExtResource("2_jywan")
+region = Rect2(464, 417, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwver"]
+atlas = ExtResource("2_jywan")
+region = Rect2(528, 481, 16, 15)
+
+[node name="InventoryUI" type="Control" unique_id=1044761034]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryBackground" type="NinePatchRect" parent="." unique_id=1203301288]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -466.125
+offset_top = -282.0
+offset_right = 466.125
+offset_bottom = 282.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("1_p0ay3")
+patch_margin_left = 24
+patch_margin_top = 24
+patch_margin_right = 24
+patch_margin_bottom = 24
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="TitleBannerHBox" type="HBoxContainer" parent="InventoryBackground" unique_id=201997826]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -480.0
+offset_top = 25.0
+offset_right = 481.0
+offset_bottom = 105.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+
+[node name="LeftFold" type="TextureRect" parent="InventoryBackground/TitleBannerHBox" unique_id=1356974163]
+layout_mode = 2
+texture = SubResource("AtlasTexture_1r87s")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MiddleStrip" type="TextureRect" parent="InventoryBackground/TitleBannerHBox" unique_id=1599219299]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("AtlasTexture_ufdhg")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="LeftSideLabels" type="HBoxContainer" parent="InventoryBackground/TitleBannerHBox/MiddleStrip" unique_id=1463769073]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 1.0
+offset_right = -484.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="InventoryLabel" type="Label" parent="InventoryBackground/TitleBannerHBox/MiddleStrip/LeftSideLabels" unique_id=80467464]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = "Inventory"
+vertical_alignment = 1
+
+[node name="CapacityLabel" type="Label" parent="InventoryBackground/TitleBannerHBox/MiddleStrip/LeftSideLabels" unique_id=136076319]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.8461165, 0.84611654, 0.84611654, 1)
+text = "4/32"
+vertical_alignment = 1
+
+[node name="RightSideLabels" type="HBoxContainer" parent="InventoryBackground/TitleBannerHBox/MiddleStrip" unique_id=221094287]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 485.0
+offset_top = 1.0
+offset_right = -12.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="SeasonLabel" type="Label" parent="InventoryBackground/TitleBannerHBox/MiddleStrip/RightSideLabels" unique_id=1677810211]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.8461165, 0.84611654, 0.84611654, 1)
+text = "Spring"
+vertical_alignment = 1
+
+[node name="Seperator" type="TextureRect" parent="InventoryBackground/TitleBannerHBox/MiddleStrip/RightSideLabels" unique_id=819385251]
+custom_minimum_size = Vector2(18, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_xbxri")
+stretch_mode = 5
+
+[node name="DayLabel" type="Label" parent="InventoryBackground/TitleBannerHBox/MiddleStrip/RightSideLabels" unique_id=1449707235]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.8461165, 0.84611654, 0.84611654, 1)
+text = "Day 12"
+vertical_alignment = 1
+
+[node name="Spacer" type="ColorRect" parent="InventoryBackground/TitleBannerHBox/MiddleStrip/RightSideLabels" unique_id=1841609044]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="CloseInventoryButton" type="TextureButton" parent="InventoryBackground/TitleBannerHBox/MiddleStrip/RightSideLabels" unique_id=1103666941]
+custom_minimum_size = Vector2(35, 0)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_lvuwj")
+stretch_mode = 5
+
+[node name="RightFold" type="TextureRect" parent="InventoryBackground/TitleBannerHBox" unique_id=457830893]
+layout_mode = 2
+texture = SubResource("AtlasTexture_jywan")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MoneyCounter" type="HBoxContainer" parent="InventoryBackground" unique_id=1753011318]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 0.125
+offset_top = -96.0
+offset_right = 170.125
+offset_bottom = -16.0
+grow_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="Tab" type="TextureRect" parent="InventoryBackground/MoneyCounter" unique_id=959571398]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_wgv8v")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Bulb" type="TextureRect" parent="InventoryBackground/MoneyCounter" unique_id=1144802818]
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+texture = SubResource("AtlasTexture_dwver")
+expand_mode = 3
+stretch_mode = 5

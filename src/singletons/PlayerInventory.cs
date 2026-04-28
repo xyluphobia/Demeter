@@ -32,7 +32,7 @@ public partial class PlayerInventory : Node
     InventoryStackResource stack = new InventoryStackResource {
       Item = item,
       Quantity = quantity,
-      CollectedOnDay = GameCalendar.I.currentDay
+      CollectedOnDay = GameCalendar.I.totalDaysPassed
     };
 
     if (_inventory.ContainsKey(item))
@@ -75,7 +75,7 @@ public partial class PlayerInventory : Node
 
   // Called to expire old stacks
   public void ProcessExpiry() {
-    int today = GameCalendar.I.currentDay;
+    int today = GameCalendar.I.totalDaysPassed;
     foreach (KeyValuePair<CollectibleItemResource, List<InventoryStackResource>> entry in _inventory) {
       entry.Value.RemoveAll(s =>
           s.CollectedOnDay + entry.Key.ShelfLifeDays < today);

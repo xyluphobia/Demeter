@@ -25,7 +25,7 @@ public partial class Sprint1Debug : Node
     tapPosLabel = GetNode<Label>("Canvas/Outputs/LastTapPos/Result");
     draggingLabel = GetNode<Label>("Canvas/Outputs/Dragging/Result");
 
-    dayLabel.Text = GameCalendar.I.currentDay.ToString();
+    dayLabel.Text = GameCalendar.I.seasonDaysPassed.ToString();
     seasonLabel.Text = GameCalendar.I.currentSeason.ToString();
     tapPosLabel.Text = "No Tap Yet";
     draggingLabel.Text = "False";
@@ -39,7 +39,7 @@ public partial class Sprint1Debug : Node
   }
 
   private void OnDayPassed(int day) {
-    dayLabel.Text = GameCalendar.I.currentDayInSeason.ToString();
+    dayLabel.Text = GameCalendar.I.seasonDaysPassed.ToString();
     seasonLabel.Text = GameCalendar.I.currentSeason.ToString();
   }
 

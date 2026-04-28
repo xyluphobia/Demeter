@@ -26,3 +26,5 @@ res://data/crops/Apple/Granny Smith.tres
 res://data/crops/Apple/Honeycrisp.tres
 res://assets/tile_sets/GroundTileSet.tres
 res://scenes/debug/Sprint1DebugScene.tscn
+res://scenes/ui/InventoryItemCard.tscn
+res://scenes/ui/InventoryUI.tscn
